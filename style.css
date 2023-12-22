@@ -65,7 +65,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
+
+.business-card-container
+{
+	padding: 10vw;
+}
+
+.business-card-image
+{
+	/*padding: 10vw;*/
+	width: 12cm;
+	height: auto;
+	max-width: 100%;
+	min-width: 8cm;
+	box-shadow: rgba(0, 0, 0, 0.5) -0.5px 8px 20px;
+	/*transition: .6s;*/
+}
+/*.business-card-image:hover
+{
+	transform: perspective(1200px) rotateY(10deg) scale(1.1, 1.1);
+	transition: .6s;
+}*/
 
 html
 {
