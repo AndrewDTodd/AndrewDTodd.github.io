@@ -6,9 +6,8 @@
 		<link rel="stylesheet" href="Styles/style.css">
 		<title>Portfolio Andrew Todd</title>
 	</head>
-	
-    <body>
-        <div class="header">
+	<body>
+		<header class="page-header">
             <div class="website-title">
                 <a href="index.html">Portfolio Andrew Todd</a>
             </div>
@@ -22,19 +21,19 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">LinkedIn</a>
             </div>
-        </div>
-        
-		<header class="title-section">
-            <div class="business-card-container">
-					<img class="business-card-image" src="Images/BusinessCard_front.png" alt="business_card_front" id="hoverBusinessCard">
-				</div>
-
-            <canvas class="particles-background"></canvas>
 		</header>
 
 		<main>
-	        
+			<section class="title-section">
+				<!-- This is where items in the main page title section go -->
+				<div class="business-card-container">
+					<img class="business-card-image" src="Images/BusinessCard_front.png" alt="business_card_front" id="hoverBusinessCard">
+				</div>
+			</section>
 		</main>
+
+        <!-- This canvas used for the particle background must be the last element of the body -->
+        <canvas class="particles-background"></canvas>
         
 		<script src="Scripts/business_card_interact.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
