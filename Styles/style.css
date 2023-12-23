@@ -1,7 +1,7 @@
 .website-title a
 {
 	text-decoration: none;
-	color: #fff;
+	color: #cfcfcf;
 	font-size: 1.5rem;
 }
 
@@ -25,7 +25,7 @@
 .header-navigation a
 {
 	text-decoration: none;
-	color: #fff;
+	color: #cfcfcf;
 }
 
 .social-links
@@ -37,8 +37,14 @@
 .social-links a
 {
 	text-decoration: none;
-	color: #fff;
+	color: #cfcfcf;
 	margin-left: 10px;
+}
+
+.social-icon
+{
+    color: #cfcfcf;
+    margin-left: 10px;
 }
 
 .page-header
@@ -61,17 +67,30 @@
 {
 	height: 100vh;
 	width: 100%;
-	background-color: #ddd;
+	background-image: url('../Images/title_section_nebula_background.jpg');
+    background-size: cover;
+    background-position: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
 }
+.title-section::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(200, 200, 200, 0.6) 35%, rgba(10, 10, 10, 0.4) 80%);
+    z-index: 1;
+}
 
 .business-card-container
 {
 	padding: 10vw;
-    z-index: 1;
+    z-index: 2;
 }
 
 .business-card-image
