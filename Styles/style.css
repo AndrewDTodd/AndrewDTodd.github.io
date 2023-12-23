@@ -71,23 +71,27 @@
 .business-card-container
 {
 	padding: 10vw;
+    z-index: 1;
 }
 
 .business-card-image
 {
-	/*padding: 10vw;*/
 	width: 12cm;
 	height: auto;
 	max-width: 100%;
 	min-width: 8cm;
-	box-shadow: rgba(0, 0, 0, 0.5) -0.5px 8px 20px;
-	/*transition: .6s;*/
+	box-shadow: rgba(0, 0, 0, 0.5) 0.3px -10px 20px;
+    transform: perspective(900px) rotateX(-6deg);
 }
-/*.business-card-image:hover
+
+.particles-background
 {
-	transform: perspective(1200px) rotateY(10deg) scale(1.1, 1.1);
-	transition: .6s;
-}*/
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 
 html
 {

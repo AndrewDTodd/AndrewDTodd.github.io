@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const business_card = document.getElementById('hoverBusinessCard');
 	let isFlipped = false;
+    let defaultTransform = getComputedStyle(business_card).transform;
 	let originalTransform = 'none';
-	let defaultBoxShadow;
+	let defaultBoxShadow = getComputedStyle(business_card).boxShadow;
 
 	function toggleImage() {
 		isFlipped = !isFlipped;
@@ -24,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     {
         business_card.addEventListener('touchstart', function() {
             business_card.style.transform = 'transform 0.3s ease_out, box-shadow 0.3s ease-out';
-
-            defaultBoxShadow = getComputedStyle(business_card).boxShadow;
         });
 
         business_card.addEventListener('touchmove', function (event) {
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         business_card.addEventListener('touchend', function () {
-            business_card.style.transform = 'none';
+            business_card.style.transform = defaultTransform;
 
             business_card.style.boxShadow = defaultBoxShadow;
         });
@@ -57,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     {
     	business_card.addEventListener('mouseenter', function () {
     		business_card.style.transition = 'transform 0.3s ease-out, box-shadow 0.3s ease-out';
-    
-    		defaultBoxShadow = getComputedStyle(business_card).boxShadow;
     	});
     
     	business_card.addEventListener('mousemove', function (event) {
@@ -79,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     	});
     
     	business_card.addEventListener('mouseleave', function () {
-    		business_card.style.transform = 'none';
+    		business_card.style.transform = defaultTransform;
     
     		business_card.style.boxShadow = defaultBoxShadow;
     	});
