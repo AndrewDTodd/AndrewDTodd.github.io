@@ -3,9 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
 		<link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="Styles/NavHeader.css">
+        <link rel="stylesheet" href="Styles/TitleSection.css">
+        <link rel="stylesheet" href="Styles/TitleSection_anim.css">
+        <link rel="stylesheet" href="Styles/Footer.css">
+        
 		<title>Andrew's Portfolio</title>
 	</head>
 	<body>
@@ -30,16 +40,35 @@
 		<main>
 			<section class="title-section">
 				<!-- This is where items in the main page title section go -->
+                <div class="introduction">
+                    <h1>Permit me to introduce myself</h1>
+                </div>
+                
 				<div class="business-card-container">
 					<img class="business-card-image" src="Images/BusinessCard_front.png" alt="business_card_front" id="hoverBusinessCard">
 				</div>
+
+                <div class="click-me-container" id="clickMeContainer">
+                    <div class="red-arrow"></div>
+                    <h1>Click Me</h1>
+                </div>
+
+                <canvas class="particles-background"></canvas>
 			</section>
+
+            <section class="placeholder-exhibit">
+
+            </section>
 		</main>
 
-        <!-- This canvas used for the particle background must be the last element of the body -->
-        <canvas class="particles-background"></canvas>
+        <footer class="footer">
 
+        </footer>
+
+        <script src="Scripts/nav_header_controller.js"></script>
 		<script src="Scripts/business_card_interact.js"></script>
+        <script src="Scripts/business_card_prompt.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
         <script src="Scripts/particle_background_init.js"></script>
     </body>

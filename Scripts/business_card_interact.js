@@ -1,11 +1,21 @@
+businessCardInteracted = false;
+businessCardClicked = false;
+
 document.addEventListener('DOMContentLoaded', function () {
-	const business_card = document.getElementById('hoverBusinessCard');
+    const business_card = document.getElementById('hoverBusinessCard');
+    const clickMeArrowContainer = document.getElementById('clickMeContainer');
 	let isFlipped = false;
     let defaultTransform = getComputedStyle(business_card).transform;
 	let originalTransform = 'none';
 	let defaultBoxShadow = getComputedStyle(business_card).boxShadow;
 
-	function toggleImage() {
+	function toggleImage(event) {
+        businessCardInteracted = true;
+        businessCardClicked = true;
+
+        business_card.classList.remove('business-card-image_attention');
+        clickMeArrowContainer.style.display = 'none';
+        
 		isFlipped = !isFlipped;
 
 		originalTransform = getComputedStyle(business_card).transform;
@@ -14,8 +24,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		setTimeout(function () {
 			business_card.src = isFlipped ? 'Images/BusinessCard_back.png' : 'Images/BusinessCard_front.png';
-		
-			business_card.style.transform = originalTransform;
+
+            business_card.style.transform = defaultTransform;
+
+            business_card.style.boxShadow = defaultBoxShadow;
+            /*if(isInBounds)
+            {
+			    business_card.style.transform = originalTransform;
+            }
+            else
+            {
+                business_card.style.transform = defaultTransform;
+
+                business_card.style.boxShadow = defaultBoxShadow;
+            }*/
 		}, 300);
 	}
 
@@ -23,11 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if('ontouchstart' in window || navigator.maxTouchPoints)
     {
-        business_card.addEventListener('touchstart', function() {
-            business_card.style.transform = 'transform 0.3s ease_out, box-shadow 0.3s ease-out';
-        });
+        business_card.addEventListener('touchstart', function(event) {
+            event.preventDefault();
+
+            businessCardInteracted = true;
+
+            business_card.classList.remove('business-card-image_attention');
+        }, {passive: true});
 
         business_card.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+            
             const touch = event.touches[0];
 
             const imageRect = business_card.getBoundingClientRect();
@@ -45,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             business_card.style.boxShadow = shadowY + 'px ' + shadowX + 'px ' + shadowSize + 'px rgba(0, 0, 0, 0.5)';
         });
-
+        
         business_card.addEventListener('touchend', function () {
             business_card.style.transform = defaultTransform;
 
@@ -55,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if('onmousemove' in window)
     {
     	business_card.addEventListener('mouseenter', function () {
-    		business_card.style.transition = 'transform 0.3s ease-out, box-shadow 0.3s ease-out';
+    		businessCardInteracted = true;
+
+            business_card.classList.remove('business-card-image_attention');
     	});
     
     	business_card.addEventListener('mousemove', function (event) {
