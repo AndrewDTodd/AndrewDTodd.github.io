@@ -1,56 +1,3 @@
-.website-title
-{
-    order: 1;
-}
-.website-title a
-{
-	text-decoration: none;
-	font-size: 1.5rem;
-    color: #cfcfcf;
-}
-
-.header-navigation
-{
-    order: 2;
-}
-.header-navigation ul
-{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-navigation li
-{
-	margin-right: 20px;
-}
-.header-navigation a
-{
-	text-decoration: none;
-    color: #cfcfcf;
-}
-
-.social-links
-{
-    order: 3;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-.social-links a
-{
-	text-decoration: none;
-	margin-left: 10px;
-    color: #cfcfcf;
-}
-
-.social-icon
-{
-    margin-left: 10px;
-}
-
 .page-header
 {
 	box-sizing: border-box;
@@ -65,11 +12,77 @@
 	display: none;
 	align-items: center;
 	justify-content: space-between;
-    flex-wrap: wrap;
 }
 .page-header.fixed
 {
     display: flex;
+}
+
+.website-title
+{
+    
+}
+.website-title a
+{
+	text-decoration: none;
+	font-size: 1.5rem;
+    color: #cfcfcf;
+}
+
+.links-container
+{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-navigation
+{
+    
+}
+.header-navigation ul
+{
+	list-style-type: none;
+    display: flex;
+	margin: 0;
+	padding: 0;
+}
+.header-navigation li
+{
+	margin-right: 20px;
+}
+.header-navigation a
+{
+	text-decoration: none;
+    color: #cfcfcf;
+}
+
+.social-links
+{
+    
+}
+.social-links a
+{
+    color: #cfcfcf;
+    margin-left: 10px;
+}
+
+.social-icon
+{
+    margin-left: 10px;
+}
+
+.menu-icon
+{
+    display: none;
+    position: absolute;
+    right: 0;
+    padding-right: 2.5vh;
+}
+.menu-icon i
+{
+    color: #cfcfcf;
 }
 
 @media (max-width: 600px)
@@ -77,19 +90,36 @@
     .page-header
     {
         flex-direction: column;
+        align-items: center;
     }
 
     .website-title
     {
-        order: 1;
+        width: 100%;
         text-align: center;
-        margin-bottom: 10px;
     }
 
-    .header-navigation,
-    .social-links
+    .links-container
     {
-        order: 2;
-        justify-content: center;
+        width: 100%;
+        padding-top: 1.0vh;
+    }
+
+    .header-navigation, .social-links
+    {
+        display: none;
+    }
+    
+    .menu-icon
+    {
+        display: flex;
+    }
+
+    .menu-expanded .header-navigation,
+    .menu-expanded .social-links
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

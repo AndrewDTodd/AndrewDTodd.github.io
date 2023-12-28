@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const titleSection = document.querySelector('.title-section');
     const pageHeader = document.querySelector('.page-header');
+    const menuIcon = document.querySelector('.menu-icon');
 
     window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
@@ -15,5 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             pageHeader.classList.remove('fixed');
         }
+    });
+
+    menuIcon.addEventListener('click', function () {
+        pageHeader.classList.toggle('menu-expanded');
     });
 });
