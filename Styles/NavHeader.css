@@ -4,7 +4,7 @@
 	width: 100%;
 	height: auto;
 	padding: 2.5vh;
-	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+	background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
 	color: #cfcfcf;
 	position: fixed;
 	top: 0;
@@ -58,11 +58,11 @@
     color: #cfcfcf;
 }
 
-.social-links
+.social-links-nav
 {
     
 }
-.social-links a
+.social-links-nav a
 {
     color: #cfcfcf;
     margin-left: 10px;
@@ -105,7 +105,7 @@
         padding-top: 1.0vh;
     }
 
-    .header-navigation, .social-links
+    .header-navigation, .social-links-nav
     {
         display: none;
     }
@@ -116,7 +116,7 @@
     }
 
     .menu-expanded .header-navigation,
-    .menu-expanded .social-links
+    .menu-expanded .social-links-nav
     {
         display: flex;
         flex-direction: column;

@@ -20,8 +20,24 @@
     top: 0;
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle, rgba(10, 10, 10, 0.7) 40%, rgba(200, 200, 200, 0.4) 80%);
+    background: radial-gradient(circle, rgba(150, 150, 150, 0.7) 40%, rgba(10, 10, 10, 0.4) 80%);
     z-index: 1;
+}
+
+.social-links-title
+{
+    /*justify-content: flex-end;*/
+    position: absolute;
+    top: 3vh;
+    right: 4vh;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out 3.2s forwards
+}
+.social-links-title a
+{
+    color: #cfcfcf;
+    margin-left: 10px;
 }
 
 .introduction
@@ -79,20 +95,20 @@
     z-index: 2;
     color: red;
     font-family: 'Inconsolata', monospace;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0.4;
+    opacity: 0;
     filter: brightness(120%);
+    animation: pulse 4s infinite;
 }
 .click-me-container h1
 {
     font-size: 1em;
     margin: 0;
     letter-spacing: 1px;
-    animation: pulse 2s infinite;
 }
 
 .red-arrow
@@ -103,7 +119,45 @@
     border-right: 10px solid transparent;
     border-bottom: 20px solid red;
     margin: 10px auto;
-    animation: pulse 2s infinite;
+}
+
+.title-navigation
+{
+    position: absolute;
+    top: calc(50% + 35vh);
+    z-index: 2;
+    opacity: 0;
+    min-width: 80vw;
+    animation: fadeIn 0.7s ease-out 3.2s forwards;
+}
+.title-navigation ul
+{
+	list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+.title-navigation li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title-navigation a
+{
+	text-decoration: none;
+    color: #cfcfcf;
+}
+.title-navigation a h1
+{
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    filter: brightness(120%);
+    font-size: 1.5em;
+    margin: 0px;
+    margin-bottom: 3px;
 }
     
 .particles-background
@@ -113,4 +167,12 @@
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+@media (max-width: 750px)
+{
+    .title-navigation
+    {
+        min-width: 100vh;
+    }
 }
