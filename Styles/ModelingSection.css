@@ -1,0 +1,104 @@
+.modeling-exhibit
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+}
+
+.flex-item
+{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#carousel-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 80%;
+}
+
+.carousel
+{
+    width: 90%;
+    height: 100%;
+}
+
+.slick-list
+{
+    height: 100%;
+}
+
+.slick-track
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slick-slide
+{
+    height: 100%;
+}
+
+.slick-initialized .slick-slide
+{
+    display: flex;
+}
+
+.slide-content
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+@media(min-width: 961px)
+{
+    .slide-content
+    {
+        flex-direction: row;
+    }
+
+    .slide-image
+    {
+        width: 60%;
+    }
+    .slide-image img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .slide-text
+    {
+        width: 40%;
+    }
+}
+
+@media(max-width: 960px)
+{
+    .slide-image
+    {
+        height: 70%;
+    }
+    .slide-image img
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .slide-text
+    {
+        height: 30%;
+    }
+}

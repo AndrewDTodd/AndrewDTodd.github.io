@@ -1,7 +1,34 @@
+.charcoal-body
+{
+    background-color: #333;
+}
+
 .placeholder-exhibit
 {
     height: 90vh;
     background-color: #fff;
+}
+
+.exhibit-title
+{
+    text-decoration: none;
+    height: 10%;
+}
+.exhibit-title h1
+{
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #eee;
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    filter: brightness(120%);
+}
+
+.section-description
+{
+    height: 10%;
+    color: #cfcfcf;
 }
 
 html
@@ -14,5 +41,6 @@ body
 {
 	margin: 0;
 	padding: 0;
+    box-sizing: border-box;
 	font-family: 'Arial', sans-serif;
 }

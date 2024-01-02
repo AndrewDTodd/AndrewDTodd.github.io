@@ -3,22 +3,26 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="Styles/style.css">
         <link rel="stylesheet" href="Styles/NavHeader.css">
         <link rel="stylesheet" href="Styles/TitleSection.css">
         <link rel="stylesheet" href="Styles/TitleSection_anim.css">
+        <link rel="stylesheet" href="Styles/ModelingSection.css">
         <link rel="stylesheet" href="Styles/Footer.css">
         
 		<title>Andrew's Portfolio</title>
 	</head>
-	<body>
+	<body class="charcoal-body">
 		<header class="page-header">
     		<div class="website-title">
                 <a href="index.html">Andrew's Portfolio</a>
@@ -31,9 +35,9 @@
             <div class="links-container">
     			<nav class="header-navigation">
     				<ul>
-    					<li><a href="#section1">Section 1</a></li>
-    					<li><a href="#section2">Section 2</a></li>
-    					<li><a href="#section3">Section 3</a></li>
+    					<li><a href="#3dmodeling">3D Modeling</a></li>
+    					<li><a href="#section2"></a>Programming</li>
+    					<li><a href="#section3">Games</a></li>
     				</ul>
     			</nav>
                 
@@ -67,23 +71,27 @@
                     <h1>Click Me</h1>
                 </div>
 
+                <div class="nav-header">
+                    <h1>Exhibits</h1>
+                </div>
+
                 <nav class="title-navigation">
     				<ul>
     					<li>
-                            <a href="#section1">
-                            <h1>Section 1</h1>
+                            <a href="#3dmodeling">
+                            <h1>3D Modeling</h1>
                             <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </li>
     					<li>
                             <a href="#section2">
-                            <h1>Section 2</h1>
+                            <h1>Games</h1>
                             <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </li>
     					<li>
                             <a href="#section3">
-                            <h1>Section 3</h1>
+                            <h1>Programming</h1>
                             <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </li>
@@ -93,8 +101,51 @@
                 <canvas class="particles-background"></canvas>
 			</section>
 
-            <section class="placeholder-exhibit" id="section1">
-                
+            <section class="modeling-exhibit" id="3dmodeling">
+                <div class="flex-item">
+                    <a class="exhibit-title" href="Pages/3D Models/3d_models_catalog.html">
+                        <h1>3D Modeling Exhibit</h1>
+                    </a>
+                </div>
+
+                <div class="flex-item">
+                    <div class="section-description">
+                        <p>
+                        This carousel contains renders of a selection of 3D models I have created. An item can be selected and will take you to the 3D Models catalog for that item where more detail on that item can be found
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/baby_slug_dog.jpg" alt="BabySlugDog">
+                            </div>
+                            <div class="slide-text">
+                                <p>A baby slug dog. He may be little now, but soon he will be a big slug dog.</p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/slug_dog.jpg" alt="SlugDog">
+                            </div>
+                            <div class="slide-text">
+                                <p>A fully grown slug dog in his natural habitat. He may look lazy (he is) and tame, but he can be mean sometimes.</p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/house.jpg" alt="House">
+                            </div>
+                            <div class="slide-text">
+                                <p>A house that cost too much to build, and was sold for far less. It's pretty though... and there are nice mountians to the north.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 		</main>
 
@@ -102,6 +153,10 @@
 
         </footer>
 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="Scripts/slick_init.js"></script>
+        
         <script src="Scripts/nav_header_controller.js"></script>
 		<script src="Scripts/business_card_interact.js"></script>
         <script src="Scripts/business_card_prompt.js"></script>

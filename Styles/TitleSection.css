@@ -26,7 +26,6 @@
 
 .social-links-title
 {
-    /*justify-content: flex-end;*/
     position: absolute;
     top: 3vh;
     right: 4vh;
@@ -52,7 +51,6 @@
 .introduction h1
 {
     font-size: 2.5em;
-    marign: 0;
     letter-spacing: 1px;
     color: #eee;
     font-family: 'Inconsolata', monospace;
@@ -121,13 +119,42 @@
     margin: 10px auto;
 }
 
+.nav-header
+{
+    position: absolute;
+    top: calc(50% + 33vh);
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out 3.2s forwards;
+    text-decoration: none;
+    color: #cfcfcf;
+    background: radial-gradient(ellipse at center, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0) 72%);
+    padding: 10px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.nav-header h1
+{
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    filter: brightness(120%);
+    font-size: 1.6em;
+    margin: 0px;
+    margin-bottom: 3px;
+}
+
 .title-navigation
 {
     position: absolute;
-    top: calc(50% + 35vh);
+    top: calc(50% + 38vh);
     z-index: 2;
     opacity: 0;
     min-width: 80vw;
+    background: radial-gradient(ellipse at center, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     animation: fadeIn 0.7s ease-out 3.2s forwards;
 }
 .title-navigation ul
