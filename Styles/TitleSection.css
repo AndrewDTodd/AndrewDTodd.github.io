@@ -200,6 +200,6 @@
 {
     .title-navigation
     {
-        min-width: 100vh;
+        min-width: 100vw;
     }
 }
