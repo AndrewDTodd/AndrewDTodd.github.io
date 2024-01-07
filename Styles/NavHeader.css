@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
-	padding: 2.5vh;
+	padding: 2.0vh;
 	background: linear-gradient(to bottom, rgba(40,40,40,1), rgba(40,40,40,0.95));
 	color: #cfcfcf;
 	position: fixed;
@@ -60,7 +60,7 @@
 
 .social-links-nav
 {
-    
+    margin-right: .5vh;
 }
 .social-links-nav a
 {
