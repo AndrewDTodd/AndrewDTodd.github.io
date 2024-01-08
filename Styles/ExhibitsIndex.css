@@ -21,9 +21,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    height: 50vh;
     border-bottom: 2px solid transparent;
-    border-image: linear-gradient(to right, transparent 25%, white 50%, transparent 75%);
+    border-image: linear-gradient(to right, transparent 10%, white 50%, transparent 75%);
+    border-image-slice: 1;
+}
+.top-container p
+{
+    min-height: 50vh;
+    border-right: 2px solid transparent;
+    border-image: linear-gradient(to bottom, transparent 5%, white 50%, transparent 95%);
     border-image-slice: 1;
 }
 
@@ -38,15 +44,12 @@
 .catalog-nav-container
 {
     box-sizing: border-box;
-    height: 100%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
     padding: 20px;
-    border-left: 2px solid transparent;
-    border-image: linear-gradient(to bottom, transparent 5%, white 50%, transparent 95%);
-    border-image-slice: 1;
 }
 
 .catalog-nav-header
@@ -70,9 +73,9 @@
 
 .catalog-navigation
 {
+    height: 100%;
     background: radial-gradient(ellipse at center, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
     padding: 0;
-    height: 100%;
 }
 .catalog-navigation ul
 {
