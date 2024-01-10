@@ -49,3 +49,8 @@ p
 {
     font-size: 1.2em;
 }
+
+section:target
+{
+    padding-top: 50px;
+}
