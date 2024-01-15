@@ -216,4 +216,9 @@
         margin: 0;
         padding: 0;
     }
+
+    .index-navigation a h1
+    {
+        font-size: 1.2em;
+    }
 }

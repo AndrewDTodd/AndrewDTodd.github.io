@@ -269,8 +269,38 @@
 		</main>
 
         <footer class="footer">
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
+            
+            <form action="https://formspree.io/f/xyyrzpnq" method="POST" class="footer-contact-form">
+                <div class="contact-form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
+                <div class="contact-form-row">
+                    <label for="contact">Contact method:</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                </div>
+
+                <div class="contact-form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <input type="submit" value="Send Message">
+            </form>
         </footer>
+
+        <!--<div id="phoneModal" class="modal-container">
+            <div class="modal-box">
+                <span id="closeBtn" class="close-btn">Close Me</span>
+                <h2>Andrew's Phone Number</h2>
+                <p>+1 443-450-8469</p>
+            </div>
+        </div>-->
 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -279,6 +309,8 @@
         <script src="Scripts/nav_header_controller.js"></script>
 		<script src="Scripts/business_card_interact.js"></script>
         <script src="Scripts/business_card_prompt.js"></script>
+
+        <script src="Scripts/footer.js"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
         <script src="Scripts/particle_background_init.js"></script>
