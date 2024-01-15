@@ -1,0 +1,37 @@
+.carousel
+{
+    width: 90%;
+    height: 100%;
+}
+
+.slick-list
+{
+    height: 100%;
+}
+
+.slick-track
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slick-slide
+{
+    height: 100%;
+}
+
+.slick-initialized .slick-slide
+{
+    display: flex;
+}
+
+.slick-dots li button:before
+{
+    color: #cfcfcf;
+}
+.slick-dots li.slick-active button:before
+{
+    color: #cfcfcf;
+}

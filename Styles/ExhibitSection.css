@@ -1,4 +1,4 @@
-.modeling-exhibit
+.exhibit
 {
     display: flex;
     flex-direction: column;
@@ -20,45 +20,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 80%;
-}
-
-.carousel
-{
-    width: 90%;
-    height: 100%;
-}
-
-.slick-list
-{
-    height: 100%;
-}
-
-.slick-track
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.slick-slide
-{
-    height: 100%;
-}
-
-.slick-initialized .slick-slide
-{
-    display: flex;
-}
-
-.slick-dots li button:before
-{
-    color: #cfcfcf;
-}
-.slick-dots li.slick-active button:before
-{
-    color: #cfcfcf;
+    height: 90%;
 }
 
 .slide-content
@@ -83,6 +45,7 @@
 {
     padding: 10px;
     color: #cfcfcf;
+    overflow-y: auto;
 }
 .slide-text p
 {
@@ -116,13 +79,13 @@
 {
     .slide-image
     {
-        height: 70%;
+        height: 60%;
         padding-bottom: 20px;
     }
 
     .slide-text
     {
-        height: 30%;
+        height: 40%;
         text-align: center;
         padding-top: 20px;
         border-top: 2px solid transparent;

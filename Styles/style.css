@@ -54,3 +54,11 @@ section:target
 {
     padding-top: 50px;
 }
+
+hr
+{
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #555, transparent);
+    margin: 20px 0;
+}
