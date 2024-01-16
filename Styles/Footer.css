@@ -7,7 +7,8 @@
     padding: 20px;
     padding-top: 10vh;
     color: #fff;
-    align-items: center;
+    align-items: space-between;
+    justify-content: center;
 }
 
 .contact-info,
