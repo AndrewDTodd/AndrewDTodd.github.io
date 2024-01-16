@@ -15,8 +15,9 @@
 {
     flex-grow: 1;
     padding: 10px;
+    width: 100%;
     max-width: 500px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 .contact-info p
 {
@@ -90,10 +91,5 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-
-    .footer-contact-form
-    {
-        min-width: 400px;
     }
 }
