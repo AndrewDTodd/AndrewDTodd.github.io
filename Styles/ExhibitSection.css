@@ -52,6 +52,21 @@
     margin: 0px;
 }
 
+.link-to-catalog
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #8d8d8d;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.link-to-catalog:hover
+{
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
 @media(min-width: 961px)
 {
     .slide-content

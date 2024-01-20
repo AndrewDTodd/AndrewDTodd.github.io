@@ -3,26 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" href="Styles/style.css">
+		<link rel="stylesheet" href="../../Styles/style.css">
         <link rel="stylesheet" href="Styles/NavHeader.css">
-        <link rel="stylesheet" href="Styles/TitleSection.css">
-        <link rel="stylesheet" href="Styles/TitleSection_anim.css">
-        <link rel="stylesheet" href="Styles/ModelingSection.css">
-        <link rel="stylesheet" href="Styles/Footer.css">
+        <link rel="stylesheet" href="Styles/CatalogIndex.css">
+        <link rel="stylesheet" href="../../Styles/Carousel.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogItem.css">
+        <link rel="stylesheet" href="../../Styles/Footer.css">
         
 		<title>Andrew's Portfolio/3D Models</title>
 	</head>
-	<body>
+	<body class="charcoal-body">
 		<header class="page-header">
     		<div class="website-title">
-                <a href="index.html">Andrew's Portfolio</a>
+                <a href="../../index.html">Andrew's Portfolio</a>
             </div>
 
             <div class="menu-icon">
@@ -32,9 +35,8 @@
             <div class="links-container">
     			<nav class="header-navigation">
     				<ul>
-    					<li><a href="#3dmodeling">3D Modeling</a></li>
-    					<li><a href="#section2"></a>Programming</li>
-    					<li><a href="#section3">Games</a></li>
+    					<li><a href="#catalog_index">Catalog Index</a></li>
+    					<li><a href="#contact_me">Contact Me</a></li>
     				</ul>
     			</nav>
                 
@@ -47,28 +49,90 @@
 		</header>
 
 		<main>
-            <section class="modeling-exhibit" id="3dmodeling">
-                <a href="Pages/3D Models/3d_models_catalog.html">
-                    <h1>3D Modeling Exhibit</h1>
-                </a>
+            <section class="catalog-index" id="catalog_index">
+                <h1>3D Modeling Catalog</h1>
+
+                <p>Welcome to my 3D modeling catalog. Here you can find a collection of 3D models I have created. Generally each model will have its own carousel that shows different aspects of the model, as well as a description of the model.
+                    <br>
+                    <br>
+                Thanks for checking it out!</p>
                 
-                <div class="section-description">
-                    <p>
-                        This carousel contains shots of a selection of 3D models I have created. An item can be clicked/selected and will take you to the 3D Models catalog for that item where more detail on that item can be found
-                    </p>
+                <h2>Catalog Index</h2>
+
+                <div class="catalog-index-list">
+                    <div>
+                        <h3>Section 1</h3>
+                        <a href="#section1-link1">Link 1</a>
+                        <a href="#section1-link2">Link 2</a>
+                    </div>
+
+                    <div>
+                        <h3>Section 2</h3>
+                        <a href="#section2-link1">Link 3</a>
+                        <a href="#section2-link2">Link 4</a>
+                    </div>
                 </div>
+            </section>
+
+            <section class="catalog-item">
+                <div class="flex-item">
+                    <h1>Item Title</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="../../Images/mr_uncredible.jpg" alt="MrUncredible">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>Item's description text...</p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="">Optional link to item object/repo</a>
             </section>
 		</main>
 
-        <footer class="footer">
+        <footer class="footer" id="contact_me">
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
 
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
         </footer>
 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../../Scripts/slick_init.js"></script>
+
         <script src="Scripts/nav_header_controller.js"></script>
-		<script src="Scripts/business_card_interact.js"></script>
-        <script src="Scripts/business_card_prompt.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-        <script src="Scripts/particle_background_init.js"></script>
+
+        <script src="../../Scripts/footer.js"></script>
     </body>
 </html>

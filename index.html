@@ -93,8 +93,8 @@
                 <div class="top-container"> 
                     <p class="index-synopsis">
                         Hello, and welcome to my portfolio. This home page is used as an exhibit of a selection of items that showcase my 3D modeling, programming, and "game building" skills. As well as this home page I have created what I refer to as "Catalog" pages for each 3D modeling, programming, and Games. These catalog pages contain a greater selection of items of those subjects than can be found here, as well as more detail for each item.
-                        <br />
-                        <br />
+                        <br>
+                        <br>
                         Thanks for checking out my porfolio!
                     </p>
 
@@ -156,7 +156,7 @@
         		</nav>
             </section>
 
-            <hr></hr>
+            <hr>
 
             <section class="exhibit" id="3dmodeling">
                 <div class="flex-item">
@@ -168,7 +168,7 @@
                 <div class="flex-item">
                     <div class="section-description">
                         <p>
-                        This carousel contains renders of a selection of 3D models I have created. CLicking on an item will take you to that item's entry in the 3D Modeling Catalog where more details and renders of that item can be found
+                        This carousel contains renders of a selection of 3D models I have created. Clicking on an item will take you to that item's entry in the 3D Modeling Catalog where more details and renders of that item can be found
                         </p>
                     </div>
                 </div>
@@ -203,9 +203,11 @@
                         </div>
                     </div>
                 </div>
+
+                <a class="link-to-catalog" href="Pages/3D Models/3d_models_catalog.html">View the 3D Models Catalog</a>
             </section>
 
-            <hr></hr>
+            <hr>
 
             <section class="exhibit" id="programming">
                 <div class="flex-item">
@@ -234,9 +236,11 @@
                         </div>
                     </div>
                 </div>
+
+                <a class="link-to-catalog" href="Pages/Programming/programming_catalog.html">View the Programming Catalog</a>
             </section>
 
-            <hr></hr>
+            <hr>
 
             <section class="exhibit" id="games">
                 <div class="flex-item">
@@ -265,6 +269,8 @@
                         </div>
                     </div>
                 </div>
+
+                <a class="link-to-catalog" href="Pages/Games/games_catalog.html">View the Games Catalog</a>
             </section>
 		</main>
 
@@ -273,25 +279,29 @@
                 <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
                 <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
             </div>
-            
-            <form action="https://formspree.io/f/xyyrzpnq" method="POST" class="footer-contact-form">
-                <div class="contact-form-row">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
 
-                <div class="contact-form-row">
-                    <label for="contact">Contact method:</label>
-                    <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
-                </div>
-
-                <div class="contact-form-row">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <input type="submit" value="Send Message">
-            </form>
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
         </footer>
 
         <!--<div id="phoneModal" class="modal-container">
