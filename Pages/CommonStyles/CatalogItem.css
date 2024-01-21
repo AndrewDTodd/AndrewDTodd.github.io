@@ -1,5 +1,6 @@
 .catalog-item
 {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -11,29 +12,27 @@
 .flex-item
 {
     width: 100%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
 #carousel-container
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
-    height: 90%;
 }
 
 .slide-content
 {
     display: flex;
-    flex-direction: column;
     height: 100%;
-    width: 100%;
 }
 
 .slide-image
 {
+    width: 100%;
 }
 .slide-image img
 {
@@ -44,7 +43,13 @@
 
 .item-description
 {
-    flex: 1;
+    padding: 10px;
+    color: #cfcfcf;
+    overflow-y: auto;
+}
+.item-description p
+{
+    margin: 0px;
 }
 
 .link-to-item
@@ -62,16 +67,61 @@
     text-decoration: underline;
 }
 
+@media(min-width: 961px)
+{
+    #carousel-container
+    {
+        flex-direction: row;
+    }
+
+    .carousel
+    {
+        height: 100%;
+        width: 70%;
+    }
+
+    .slide-image
+    {
+        padding-right: 20px;
+    }
+
+    .item-description
+    {
+        height: 100%;
+        width: 30%;
+        padding-left: 20px;
+        border-left: 2px solid transparent;
+        border-image: linear-gradient(to bottom, transparent, white, transparent);
+        border-image-slice: 1;
+    }
+}
+
 @media(max-width: 960px)
 {
-    .item-display
+    #carousel-container
     {
         flex-direction: column;
     }
 
-    .carousel,
+    .carousel
+    {
+        height: 70%;
+        width: 100%;
+    }
+    
+    .slide-image
+    {
+        padding-bottom: 20px;
+    }
+
     .item-description
     {
-        flex: 1;
+        height: 30%;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 2px solid transparent;
+        border-image: linear-gradient(to right, transparent 3%, white 50%, transparent 97%);
+        border-image-slice: 1;
     }
 }
