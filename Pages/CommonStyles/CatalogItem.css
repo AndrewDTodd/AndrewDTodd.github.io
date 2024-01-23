@@ -1,6 +1,5 @@
 .catalog-item
 {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -13,6 +12,10 @@
     width: 100%;
     box-sizing: border-box;
 }
+.flex-item h1
+{
+    padding-left: 20px;
+}
 
 #carousel-container
 {
@@ -21,6 +24,7 @@
     align-items: center;
     justify-content: space-around;
     overflow: hidden;
+    padding: 15px;
 }
 
 .slide-content
