@@ -19,10 +19,8 @@
         <link rel="stylesheet" href="../../Styles/Carousel.css">
         <link rel="stylesheet" href="../CommonStyles/CatalogItem.css">
         <link rel="stylesheet" href="../../Styles/Footer.css">
-
-        <link rel="stylesheet" href="Styles/ProgrammingPageStyles.css">
         
-		<title>Andrew's Portfolio/Programming</title>
+		<title>Andrew's Portfolio/Programming Catalog</title>
 	</head>
 	<body class="charcoal-body">
 		<header class="page-header">
@@ -54,54 +52,86 @@
             <section class="catalog-index" id="catalog_index">
                 <h1>Programming Catalog</h1>
 
-                <p>Welcome to my Programming catalog. Here you can find a collection applications I have created. Generally each program will have its own carousel that shows different screenshots relevant for that program, as well as a description of the program.
+                <p>Welcome to my Programming catalog. Here you can find a collection of Applications I have developed or otherwise helped to develop. 
+                    Bellow you will find entries in this catalog for these programs. An entry will contain a carousel of screenshots showcasing various aspects of an application
+                    from its user interface and or input output demonstrating its utility. Along with any images of the applications there will be an information section to provide
+                    information about the application.
                     <br>
                     <br>
                 Thanks for checking it out!</p>
-
-                <h3 class="school-projects-header">A Note on School Projects</h3>
-
-                <p class="school-projects-text">Some of the programms I have made over the course of my schooling will be in this catalog, though many will not be featured here. If you would like to see a more complete collection of the applications/projects I made for school you can check out <a class="school-projects-link" href="https://github.com/AndrewDTodd-SchoolProjects" target="_blank">this</a> Github organization where I have put school projects.</p>
                 
                 <h2>Catalog Index</h2>
 
                 <div class="catalog-index-list">
                     <div>
-                        <h3>Section 1</h3>
-                        <a href="#section1-link1">Link 1</a>
-                        <a href="#section1-link2">Link 2</a>
-                    </div>
-
-                    <div>
-                        <h3>Section 2</h3>
-                        <a href="#section2-link1">Link 3</a>
-                        <a href="#section2-link2">Link 4</a>
+                        <h3>Applications with GUI</h3>
+                        <a href="#uvsim">UVSim - IDE</a>
                     </div>
                 </div>
             </section>
 
-            <section class="catalog-item">
+            <section class="catalog-item" id="uvsim">
                 <div class="flex-item">
-                    <h1>Item Title</h1>
+                    <h1>UVSim - Basic Machine Language Interpreter, Assembler, and IDE</h1>
                 </div>
 
                 <div class="flex-item" id="carousel-container">
                     <div class="carousel">
                         <div class="slide-content">
                             <div class="slide-image">
-                                <img src="../../Images/mr_uncredible.jpg" alt="MrUncredible">
+                                <img src="Images/UVSim_IED/uvsim_one.png" alt="UVSim - view one">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/UVSim_IED/uvsim_two.png" alt="UVSim - view two">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/UVSim_IED/uvsim_three.png" alt="UVSim - view three">
                             </div>
                         </div>
                     </div>
     
                     <div class="item-description">
-                        <p>Item's description text...</p>
+                        <p>
+                            This application represents the culmination of a project I made for a Software Engineering class. Essentially this application begins at its core with a very 
+                            simple assembler that converts a rudimentary assembly code that was designed to demonstrate machine code by the use of instruction codes as assembly mnemonics. 
+                            That's about the best way I can think to describe the "Basic Machine Language" assembly programs used in this broader project. The assembler creates a RISK
+                            style intermediate byte-code that is then digested by a runtime interpreter.
+                            <br>
+                            <br>
+                            After the fundamental assembler and interpreter were implemented I decided to create a GUI that would allow for the editing of the "Basic Machine Language" 
+                            programs. As well as this editor we were tasked to create some kind of GUI that would allow the monitoring of the interpreters resources. In the end what I 
+                            ended up making was an Integrated Development Environment that allows the creation of "Basic Machine Language" programs, the ability to then assemble those
+                            programs into the intermediate binary, and finally execute those programs on the runtime interpreter and view the systems simulated resources in a graphical interface, 
+                            all from within one integrated environment. Hence the UVSim IDE.
+                            <br>
+                            <br>
+                            The entire project was built using c# .net. In the end I would probably not build the entire project in c# if I were to do it over again. The decision to use 
+                            c# was made out of a desire to use .net MAUI for the eventual GUI. In hindsight this was also not the best idea.
+                            <br>
+                            <br>
+                            This was all done shortly after .net MAUI was officially released, adn suffice it to say its support for desktop GUI development seemed to be a bit of an afterthought 
+                            at the time. Not only were the MAUI visual elements mre oriented for mobile UIs, at the time that I built this project MAUI could not be used to build to a exe. 
+                            I did not know this when I began, and only became aware at the very end of development. I don't know if with .net 8s release and the associated update to MAUI if this 
+                            is no longer the case. Live and learn I suppose.
+                            <br>
+                            <br>
+                            All said and done, UVSim IDE is definitely not perfect, but it was a great learning experience. In particular it was a unique opportunity to kind of get 
+                            a head start on thinking about certain aspects of assembler design and implementation that I would use soon thereafter when beginning the CS capstone, which includes a much 
+                            more robust and demanding (also realistic) assembler and virtual machine. These realizations about design that I ended up elaborating on and incorporating into 
+                            my assembler and virtual machine made both of those pieces of software very powerful programs,  made the source code very robust to change and continued development.
+                        </p>
                     </div>
                 </div>
 
-                <a class="link-to-item" href="">Optional link to item object/repo</a>
+                <a class="link-to-item" href="https://github.com/AndrewDTodd/UVSIM2.0" target="_blank">Github Repo for the UVSim Project</a>
             </section>
-		</main>
+        </main>
 
         <footer class="footer" id="contact_me">
             <div class="contact-info">
@@ -133,6 +163,11 @@
             </div>
         </footer>
 
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="../../Scripts/slick_init.js"></script>
@@ -140,5 +175,7 @@
         <script src="../CommonScripts/nav_header_controller.js"></script>
 
         <script src="../../Scripts/footer.js"></script>
+
+        <script src="../../Scripts/CarouselImageModal.js"></script>
     </body>
 </html>
