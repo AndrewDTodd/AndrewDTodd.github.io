@@ -101,7 +101,7 @@
     .slide-text
     {
         height: 40%;
-        text-align: center;
+        text-align: left;
         padding-top: 20px;
         border-top: 2px solid transparent;
         border-image: linear-gradient(to right, transparent 3%, white 50%, transparent 97%);

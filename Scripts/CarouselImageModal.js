@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         img.addEventListener('mouseup', function(event) {
             const clickDuration = Date.now() - clickStartTIme;
 
-            if(clickDuration < 200) {
+            if(clickDuration < 90) {
                 modal.style.display = 'flex';
                 modalImage.src = this.src;
             }
