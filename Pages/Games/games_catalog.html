@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="../CommonStyles/CatalogItem.css">
         <link rel="stylesheet" href="../../Styles/Footer.css">
         
-		<title>Andrew's Portfolio/Games</title>
+		<title>Andrew's Portfolio/Games Catalog</title>
 	</head>
 	<body class="charcoal-body">
 		<header class="page-header">
@@ -52,7 +52,11 @@
             <section class="catalog-index" id="catalog_index">
                 <h1>Games Catalog</h1>
 
-                <p>Welcome to my Games catalog. Here you can find a collection of Games - or game like applications - I have created or been involved in making. Generally each game will have its own carousel that shows different screenshots of that game, as well as a description of the project and my involvement.
+                <p>Welcome to my Games catalog. Here you can find a collection of games I have created or otherwise helped to develop. 
+                    
+                    An entry will contain a carousel of screenshots showcasing the game, and perhaps a video or two depending on the game.
+                    
+                    Along with media from the game there will be a synopsis of the project.
                     <br>
                     <br>
                 Thanks for checking it out!</p>
@@ -61,40 +65,64 @@
 
                 <div class="catalog-index-list">
                     <div>
-                        <h3>Section 1</h3>
-                        <a href="#section1-link1">Link 1</a>
-                        <a href="#section1-link2">Link 2</a>
-                    </div>
-
-                    <div>
-                        <h3>Section 2</h3>
-                        <a href="#section2-link1">Link 3</a>
-                        <a href="#section2-link2">Link 4</a>
+                        <a href="#sword_apris">Sword of Apris - Feather Damascus Longsword</a>
+                        <a href="#sword_guilded">Gilded Longsword</a>
+                        <a href="#sword_claymore">Claymore - Steel and Copper</a>
                     </div>
                 </div>
             </section>
 
-            <section class="catalog-item">
+            <hr>
+
+            <section class="catalog-item" id="sword_apris">
                 <div class="flex-item">
-                    <h1>Item Title</h1>
+                    <h1>Sword of Apris - Feather Damascus Longsword</h1>
                 </div>
 
                 <div class="flex-item" id="carousel-container">
                     <div class="carousel">
                         <div class="slide-content">
                             <div class="slide-image">
-                                <img src="../../Images/mr_uncredible.jpg" alt="MrUncredible">
+                                <img src="Images/SwordOfApris/whole.png" alt="Sword of Apris - complete view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/side.png" alt="Sword of Apris - top down side view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/bottom.png" alt="Sword of Apris - bottom up view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/top.png" alt="Sword of Apris - top view">
                             </div>
                         </div>
                     </div>
     
                     <div class="item-description">
-                        <p>Item's description text...</p>
+                        <p>This is a model of a longsword I actually made for a D&D campaign. I have dubbed it the Sword of Apris. 
+                            It features feather damascus, and a three-metal wire wrap on the hilt.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender, using the real time Eevee rendering engine.
+                            <br>
+                            <br>
+                            Texturing was done in Substance Painter.
+                        </p>
                     </div>
                 </div>
 
-                <a class="link-to-item" href="">Optional link to item object/repo</a>
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/SwordOfApris" target="_blank">Github Repo for the Sword of Apris</a>
             </section>
+
+            <hr>
 		</main>
 
         <footer class="footer" id="contact_me">
@@ -127,6 +155,11 @@
             </div>
         </footer>
 
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="../../Scripts/slick_init.js"></script>
@@ -134,5 +167,7 @@
         <script src="../CommonScripts/nav_header_controller.js"></script>
 
         <script src="../../Scripts/footer.js"></script>
+
+        <script src="../../Scripts/CarouselImageModal.js"></script>
     </body>
 </html>
