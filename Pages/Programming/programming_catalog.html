@@ -82,6 +82,7 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
                     <div>
                         <h3>Applications with GUI</h3>
                         <a href="#uvsim">UVSim - IDE</a>
+                        <a href="#sfml-mem">Card Memory Game</a>
                     </div>
                 </div>
             </section>
@@ -169,6 +170,64 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
                 </div>
 
                 <a class="link-to-item" href="https://github.com/AndrewDTodd/UVSIM2.0" target="_blank">Github Repo for the UVSim Project</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="sfml-mem">
+                <div class="flex-item">
+                    <h1>Card Flip Memory Game</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/program_start.png" alt="Card Memory Start">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/threeCards.png" alt="Card Memory three cards matched">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/matched.png" alt="Card Memory matched cards removed">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>
+                            This application is a relatively simple memory game made in an effort to learn some ways to make GUI by hand in a c++ program. 
+                            The application creates a grid with a randomly shuffled deck of cards upon startup. The user can then select the face down cards one at a time 
+                            to flip them face up and reveal the identity of the card. As the user finds and selects matches, those matched cards will remain face up 
+                            together until either all four of that cards kind are selected in sequence, or the sequence is broken by the selection of a different kind 
+                            of card, at which time the four of a kind cards will be removed from the field.
+                            <br>
+                            <br>
+                            All in all the project was a good learning opportunity. Not only creating the c++ objects and functions needed to run the game, 
+                            but also to become a little familiar with the SFML cross platform GUI libraries and development of c++ applications on mac with xcode, which is not my 
+                            normal development environment or target platform.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="item-technical-details">
+                    <h3>Technical Details and Notes</h3>
+
+                    <p>
+                        The entire project was built using c++ and the SFML GUI libraries. Given that I now have more experience with at least a few other GUI options, I can say I 
+                        prefer a more modern approach. At least in 2019 when I built this, all the GUI related elements were hard coded compared to how newer frameworks like MAUI or 
+                        WIN UI allow a more visual markup approach. That being said, cross platform is very nice and unlike MAUI, SFML would let me build to an exe.
+                    </p>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd/SFML-Memory-Game" target="_blank">Github Repo for the SFML-Memory-Game</a>
+                <a class="link-to-item" href="https://github.com/AndrewDTodd/SFML-Memory-Game/releases" target="_blank">Windows Build on Github</a>
             </section>
 
             <hr>

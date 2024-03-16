@@ -67,6 +67,40 @@
     text-decoration: underline;
 }
 
+.slide-links
+{
+    position: absolute;
+    bottom: 0;
+    width: auto;
+}
+.slide-links a
+{
+    width: 100%;
+    display: block;
+    color: #8d8d8d;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+.slide-links a:hover
+{
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+.link-to-webgl-game
+{
+    display: block;
+}
+
+@media(pointer: none)
+{
+    .link-to-webgl-game
+    {
+        display: none;
+    }
+}
+
 @media(min-width: 961px)
 {
     .slide-content
