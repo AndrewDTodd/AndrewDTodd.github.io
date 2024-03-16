@@ -93,7 +93,7 @@
     display: block;
 }
 
-@media(pointer: none)
+@media(pointer: none), (pointer: coarse), (hover: none), (hover: on-demand)
 {
     .link-to-webgl-game
     {

@@ -82,6 +82,30 @@
     text-decoration: underline;
 }
 
+.link-to-webgl-game
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #8d8d8d;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+.link-to-webgl-game:hover
+{
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+@media(pointer: none), (pointer: coarse), (hover: none), (hover: on-demand)
+{
+    .link-to-webgl-game
+    {
+        display: none;
+    }
+}
+
 @media(min-width: 961px)
 {
     #carousel-container
