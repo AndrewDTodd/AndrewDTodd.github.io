@@ -98,7 +98,7 @@
     text-decoration: underline;
 }
 
-@media(pointer: none), (pointer: coarse), (hover: none), (hover: on-demand)
+@media(max-width: 768px)
 {
     .link-to-webgl-game
     {
