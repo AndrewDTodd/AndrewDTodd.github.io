@@ -37,6 +37,7 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
         <link rel="stylesheet" href="Styles/TitleSection_anim.css">
         <link rel="stylesheet" href="Styles/ExhibitsIndex.css">
         <link rel="stylesheet" href="Styles/ExhibitSection.css">
+        <link rel="stylesheet" href="Styles/CrtTerminal.css">
         <link rel="stylesheet" href="Styles/Footer.css">
         
 		<title>Andrew's Portfolio</title>
@@ -91,7 +92,7 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
                 </div>
 
                 <div class="title-nav-container">
-                    <a href="#index">
+                    <a href="#games">
                         <h1>To Exhibits</h1>
                         <i class="fa-solid fa-chevron-down"></i>
                     </a>
@@ -102,7 +103,7 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
                 <canvas class="particles-background"></canvas>
 			</section>
 
-            <section class="exhibits-index" id="index">
+            <!--<section class="exhibits-index" id="index">
                 <h1 class="index-title">
                     Page Index
                 </h1>
@@ -174,6 +175,173 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
                         </li>
         			</ul>
         		</nav>
+            </section>
+
+            <hr>-->
+
+            <section class="exhibit" id="games">
+                <div class="flex-item">
+                    <a class="exhibit-title" href="Pages/Games/games_catalog.html">
+                        <h1>Games Exhibit</h1>
+                    </a>
+                </div>
+
+                <div class="flex-item">
+                    <div class="section-description">
+                        <p>
+                            This carousel contains screenshots of a selection of games I have developed. 
+                            Clicking on the image in an entry will take you to that item's entry in the Games Catalog where more information about that item can be found
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#autastic_education">
+                                    <img src="Pages/Games/Images/Autastic/MainMenu.png" alt="Autastic Education - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Autastic Education - ABA Therapy App</h3>
+                                <p>
+                                    An application designed to supplement ABA therapy for autistic children through the use of gamified ABA therapies. Used in conjunction with the 
+                                    Autastic Companion App (found under programming).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#wilderness_survival">
+                                    <img src="Pages/Games/Images/WildernessSurvival/MainMenu.png" alt="WildernessSurvival - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Wilderness Survival</h3>
+                                <p>
+                                    An open world survival game built for the 2016 FBLA national real-time simulation and game development competition.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#space_invaders">
+                                    <img src="Pages/Games/Images/SpaceInvaders/Menu.png" alt="Solar Flare - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Solar Flare</h3>
+                                <p>
+                                    A Space Invaders clone with my artistic flavor.
+                                </p>
+                                <div class="slide-links-container">
+                                    <a class="link-to-webgl-game" href="https://andrewdtodd.github.io/Solar-Flare-Game/" target="_blank">Play Solar Flare</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="link-to-catalog" href="Pages/Games/games_catalog.html">View the Games Catalog</a>
+            </section>
+
+            <hr>
+
+            <section class="exhibit screen" style="padding-top: 15px;" id="programming">
+                <div class="terminal">
+                    <div class="flex-item">
+                        <a class="exhibit-title" href="Pages/Programming/programming_catalog.html">
+                            <h1 style="color: var(--green-color);">Programming Exhibit</h1>
+                        </a>
+                    </div>
+
+                    <div class="flex-item">
+                        <div class="section-description">
+                            <p style="color: var(--green-color);">    
+                                This carousel contains screenshots of a selection of applications I have developed. 
+                                Clicking on the image in an entry will take you to that item's entry in the Programming Catalog where more information about that item can be found
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex-item" id="carousel-container">
+                        <div class="carousel">
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <a href="Pages/Programming/programming_catalog.html#autastic_companion">
+                                        <img src="Pages/Programming/Images/AutasticParentApp/WelcomeHomepage.png" alt="Autastic Education Companion App">
+                                    </a>
+                                </div>
+                                <div class="slide-text screen">
+                                    <div class="crt">
+                                        <div class="scanline"></div>
+                                        <div class="terminal">
+                                            <h3>Autastic Education - Companion App</h3>
+                                            <p>
+                                                A companion app to the Autastic Education therapy application (found under games). 
+                                                This app is used by parents and clinical professionals to interface with the therapy application.
+                                                <br>
+                                                <br>
+                                                Built with c# .net. Graphical User Interface constructed with .net MAUI. Authentication with Microsoft Entra ID. 
+                                                Databasing done with Cosmos DB.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <a href="Pages/Programming/programming_catalog.html#uvsim">
+                                        <img src="Pages/Programming/Images/UVSim_IED/uvsim_two.png" alt="UVSim">
+                                    </a>
+                                </div>
+                                <div class="slide-text screen">
+                                    <div class="crt">
+                                        <div class="scanline"></div>
+                                        <div class="terminal">
+                                            <h3>UVSim IDE</h3>
+                                            <p>
+                                                An Integrated Development Environment for the creation, building, and execution of a rudimentary assembly language created for 
+                                                educational purposes.
+                                                <br>
+                                                <br>
+                                                Build with c# .net, Graphical User Interface constructed with .net MAUI.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-content">
+                                <div class="slide-image">
+                                    <a href="Pages/Programming/programming_catalog.html#sfml-mem">
+                                        <img src="Pages/Programming/Images/SFML_Mem/threeCards.png" alt="Memory Game">
+                                    </a>
+                                </div>
+                                <div class="slide-text screen">
+                                    <div class="crt">
+                                        <div class="scanline"></div>
+                                        <div class="terminal">
+                                            <h3>Card Memory Game</h3>
+                                            <p>
+                                                A simple card flipping memory game.
+                                                <br>
+                                                <br>
+                                                Build in c++, Graphical User Interface constructed with the SFML cross platform GUI libraries.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="link-to-catalog" style="color: var(--green-color);" href="Pages/Programming/programming_catalog.html">View the Programming Catalog</a>
+                </div>
             </section>
 
             <hr>
@@ -252,7 +420,7 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
                                 <p style="text-align: right;">
                                     <i>-- Ivan Ivanovitch Ivanov
                                         <br>
-                                        (translation: John Johnson of the Johns)</i>
+                                        (John Johnson of the Johns)</i>
                                 </p>
                                 <p>
                                     <br>
@@ -267,156 +435,6 @@ Figuring out how to make the site interactive with custom javascrip was tedious,
                 </div>
 
                 <a class="link-to-catalog" href="Pages/3D Models/3d_models_catalog.html">View the 3D Models Catalog</a>
-            </section>
-
-            <hr>
-
-            <section class="exhibit" id="programming">
-                <div class="flex-item">
-                    <a class="exhibit-title" href="Pages/Programming/programming_catalog.html">
-                        <h1>Programming Exhibit</h1>
-                    </a>
-                </div>
-
-                <div class="flex-item">
-                    <div class="section-description">
-                        <p>    
-                            This carousel contains screenshots of a selection of applications I have developed. 
-                            Clicking on the image in an entry will take you to that item's entry in the Programming Catalog where more information about that item can be found
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex-item" id="carousel-container">
-                    <div class="carousel">
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Programming/programming_catalog.html#autastic_companion">
-                                    <img src="Pages/Programming/Images/AutasticParentApp/WelcomeHomepage.png" alt="Autastic Education Companion App">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>Autastic Education - Companion App</h3>
-                                <p>
-                                    A companion app to the Autastic Education therapy application (found under games). This app is used by parents and clinical professionals to 
-                                    interface with the therapy application.
-                                    <br>
-                                    <br>
-                                    Built with c# .net. Graphical User Interface constructed with .net MAUI. Authentication with Microsoft Entra ID. 
-                                    Databasing done with Cosmos DB (much like Mango BD).
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Programming/programming_catalog.html#uvsim">
-                                    <img src="Pages/Programming/Images/UVSim_IED/uvsim_two.png" alt="UVSim">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>UVSim IDE</h3>
-                                <p>
-                                    An Integrated Development Environment for the creation, building, and execution of a rudimentary assembly language created for 
-                                    educational purposes.
-                                    <br>
-                                    <br>
-                                    Build with c# .net, Graphical User Interface constructed with .net MAUI.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Programming/programming_catalog.html#sfml-mem">
-                                    <img src="Pages/Programming/Images/SFML_Mem/threeCards.png" alt="Memory Game">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>Card Memory Game</h3>
-                                <p>
-                                    A simple card flipping memory game.
-                                    <br>
-                                    <br>
-                                    Build in c++, Graphical User Interface constructed with the SFML cross platform GUI libraries.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a class="link-to-catalog" href="Pages/Programming/programming_catalog.html">View the Programming Catalog</a>
-            </section>
-
-            <hr>
-
-            <section class="exhibit" id="games">
-                <div class="flex-item">
-                    <a class="exhibit-title" href="Pages/Games/games_catalog.html">
-                        <h1>Games Exhibit</h1>
-                    </a>
-                </div>
-
-                <div class="flex-item">
-                    <div class="section-description">
-                        <p>
-                            This carousel contains screenshots of a selection of games I have developed. 
-                            Clicking on the image in an entry will take you to that item's entry in the Games Catalog where more information about that item can be found
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex-item" id="carousel-container">
-                    <div class="carousel">
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Games/games_catalog.html#autastic_education">
-                                    <img src="Pages/Games/Images/Autastic/MainMenu.png" alt="Autastic Education - main menu screenshot">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>Autastic Education - ABA Therapy App</h3>
-                                <p>
-                                    An application designed to supplement ABA therapy for autistic children through the use of gamified ABA therapies. Used in conjunction with the 
-                                    Autastic Companion App (found under programming).
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Games/games_catalog.html#wilderness_survival">
-                                    <img src="Pages/Games/Images/WildernessSurvival/MainMenu.png" alt="WildernessSurvival - main menu screenshot">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>Wilderness Survival</h3>
-                                <p>
-                                    An open world survival game built for the 2016 FBLA national real-time simulation and game development competition.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="slide-content">
-                            <div class="slide-image">
-                                <a href="Pages/Games/games_catalog.html#space_invaders">
-                                    <img src="Pages/Games/Images/SpaceInvaders/Menu.png" alt="Solar Flare - main menu screenshot">
-                                </a>
-                            </div>
-                            <div class="slide-text">
-                                <h3>Solar Flare</h3>
-                                <p>
-                                    A Space Invaders clone with my artistic flavor.
-                                </p>
-                                <div class="slide-links-container">
-                                    <a class="link-to-webgl-game" href="https://andrewdtodd.github.io/Solar-Flare-Game/" target="_blank">Play Solar Flare</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <a class="link-to-catalog" href="Pages/Games/games_catalog.html">View the Games Catalog</a>
             </section>
 		</main>
 
