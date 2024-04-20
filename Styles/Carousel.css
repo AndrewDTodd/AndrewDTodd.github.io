@@ -1,0 +1,76 @@
+.carousel
+{
+    width: 90%;
+    height: 100%;
+}
+.carousel img
+{
+    cursor: pointer;
+}
+
+.slick-list
+{
+    height: 100%;
+}
+
+.slick-track
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.slick-slide
+{
+    height: 100%;
+}
+
+.slick-initialized .slick-slide
+{
+    display: flex;
+}
+
+.slick-dots li button:before
+{
+    color: #cfcfcf;
+}
+.slick-dots li.slick-active button:before
+{
+    color: #cfcfcf;
+}
+
+.image-modal
+{
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1001;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-content
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-modal-close
+{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}

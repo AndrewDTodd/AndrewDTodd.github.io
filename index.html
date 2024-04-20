@@ -1,0 +1,563 @@
+<!--
+Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: Andrew Todd
+Submitted: 03/01/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1+ paragraphs):  I am pleased with the outcome of my portfolio. Though there is still more work to do. I want to modify the navigation header some more to include some more expansive options, on any resolution. Like I have with the smaller screen sizes, but to work on any size and provide some more links.
+Also I need to add more content to my programming and Games exhibits and catalogs, I just havent had the time.
+Figuring out how to make the site interactive with custom javascrip was tedious, but I am happy with it. This can be seen for example in the business card on the home pages title section, how it interacts with user mouse and touch hover/drag.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="Styles/style.css">
+        <link rel="stylesheet" href="Styles/Carousel.css">
+        <link rel="stylesheet" href="Styles/NavHeader.css">
+        <link rel="stylesheet" href="Styles/TitleSection.css">
+        <link rel="stylesheet" href="Styles/TitleSection_anim.css">
+        <link rel="stylesheet" href="Styles/ExhibitSection.css">
+        <link rel="stylesheet" href="Styles/CrtTerminal.css">
+        <link rel="stylesheet" href="Styles/Footer.css">
+        
+		<title>Andrew's Portfolio</title>
+	</head>
+	<body class="charcoal-body">
+		<header class="page-header">
+    		<div class="left-container">
+                <div class="back-button item" id="back-button" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </div>
+                
+                <div class="menu-icon item" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            
+            <div class="website-title">
+                <p>
+                    Andrew's Portfolio: <span class="wrap">Home</span>
+                </p>
+            </div>
+
+            <div class="links-container">
+    			<nav class="header-navigation" 
+                style="--text-color-hover: rgb(150, 204, 255);">
+    				<ul>
+                        <li><h3 style="margin: 0;">Catalogs:</h3></li>
+                        <li><a href="Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="Pages/Programming/programming_catalog.html">Programming</a></li>
+    					<li><a href="Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+    				</ul>
+    			</nav>
+                
+    			<div class="social-links-nav" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#" class="back-to-top-button">
+                    <i class="fa-solid fa-arrow-up icon" 
+                    style="--icon-color-hover: rgb(150, 204, 255);"></i>
+                    <p class="button-text" 
+                    style="--text-color-hover: rgb(150, 204, 255);">Top</p>
+                </a>
+            </div>
+
+            <div class="submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category expanded">
+                    <h3 class="category-title">
+                        Exhibits
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#programming">Programming</a></li>
+                        <li><a href="#3dmodeling">3D Modeling</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category expanded">
+                    <h3 class="category-title">
+                        Catalogs
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="Pages/Programming/programming_catalog.html">Programming</a></li>
+    					<li><a href="Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category">
+                    <h3 class="category-title">
+                        Exhibits
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#programming">Programming</a></li>
+                        <li><a href="#3dmodeling">3D Modeling</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+
+                <div class="social-links-nav"
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+		</header>
+
+		<main>
+			<section class="title-section">
+				<!-- This is where items in the main page title section go -->
+                <div class="social-links-title">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+    			</div>
+                
+                <div class="introduction">
+                    <h1>Permit me to introduce myself</h1>
+                </div>
+                
+				<div class="business-card-container">
+					<img class="business-card-image" src="Images/BusinessCard_front.png" alt="business_card_front" id="hoverBusinessCard">
+				</div>
+
+                <div class="click-me-container" id="clickMeContainer">
+                    <div class="red-arrow"></div>
+                    <h1>Click Me</h1>
+                </div>
+
+                <div class="title-nav-container">
+                    <a href="#games">
+                        <h1>To Exhibits</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                </div>
+
+                <div class="gradient-overlay"></div>
+
+                <canvas class="particles-background"></canvas>
+			</section>
+
+            <section class="exhibit rect_bg" 
+            style="
+            --text-color: #ffffff;
+            --catalog_link-color: #cfcfcf;
+            --catalog_link-hover: #ffffff;
+        
+            --slide_link-color: #cfcfcf;
+            --slide_link-hover: #ffffff;
+            
+            padding-top: 60px;
+            
+            --color: #33333381;" 
+            id="games">
+                <div class="video-container">
+                    <video autoplay loop muted class="video_bg radial_bg" 
+                    style="--center-color: #a12f2f;">
+                        <source src="Pages/Games/Video/oceanBGTransparent.webm" type="video/webm">
+                    </video>
+                    <div class="gradient-mask bottom" 
+                        style="--gradient-color: #333;"></div>
+                </div>
+
+                <div class="flex-item">
+                    <a class="exhibit-title" href="Pages/Games/games_catalog.html">
+                        <h1>Games Exhibit</h1>
+                    </a>
+                </div>
+
+                <div class="flex-item">
+                    <div class="section-description">
+                        <p>
+                            This carousel contains screenshots of a selection of games I have developed. 
+                            Clicking on the image in an entry will take you to that item's entry in the Games Catalog where more information about that item can be found
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#autastic_education">
+                                    <img src="Pages/Games/Images/Autastic/MainMenu.png" alt="Autastic Education - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Autastic Education - ABA Therapy App</h3>
+                                <p>
+                                    An application designed to supplement ABA therapy for autistic children through the use of gamified ABA therapies. Used in conjunction with the 
+                                    Autastic Companion App (found under programming).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#wilderness_survival">
+                                    <img src="Pages/Games/Images/WildernessSurvival/MainMenu.png" alt="WildernessSurvival - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Wilderness Survival</h3>
+                                <p>
+                                    An open world survival game built for the 2016 FBLA national real-time simulation and game development competition.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/Games/games_catalog.html#space_invaders">
+                                    <img src="Pages/Games/Images/SpaceInvaders/Menu.png" alt="Solar Flare - main menu screenshot">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Solar Flare</h3>
+                                <p>
+                                    A Space Invaders clone with my artistic flavor.
+                                </p>
+                                <div class="slide-links-container">
+                                    <a class="link-to-webgl-game" href="https://andrewdtodd.github.io/Solar-Flare-Game/" target="_blank">Play Solar Flare</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="link-to-catalog" href="Pages/Games/games_catalog.html">
+                View the Games Catalog</a>
+            </section>
+
+            <hr>
+
+            <section class="exhibit screen" 
+            style="--border-size: 5px; --padding-size: 8px; --border-color: #acacac;" id="programming">
+                <div class="backlight" style="--light-color: var(--amber-bg);">
+                    <div class="crt">
+                        <div class="flex-item">
+                            <a class="exhibit-title" href="Pages/Programming/programming_catalog.html">
+                                <h1 class="flickerText" style="color: var(--amber-color);">Programming Exhibit</h1>
+                            </a>
+                        </div>
+
+                        <div class="flex-item">
+                            <div class="section-description">
+                                <p class="flickerText" style="color: var(--amber-color);">    
+                                    This carousel contains screenshots of a selection of applications I have developed. 
+                                    Clicking on the image in an entry will take you to that item's entry in the Programming Catalog where more information about that item can be found
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex-item" id="carousel-container">
+                            <div class="carousel">
+                                <div class="slide-content">
+                                    <div class="slide-image">
+                                        <a href="Pages/Programming/programming_catalog.html#autastic_companion">
+                                            <img src="Pages/Programming/Images/AutasticParentApp/WelcomeHomepage.png" alt="Autastic Education Companion App">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text screen">
+                                        <div class="backlight">
+                                            <div class="terminal-wrapper">
+                                                <div class="terminal">
+                                                    <div class="scanline"></div>
+                                                    <h3>Autastic Education - Companion App</h3>
+                                                    <p>
+                                                        A companion app to the Autastic Education therapy application (found under games). 
+                                                        This app is used by parents and clinical professionals to interface with the therapy application.
+                                                        <br>
+                                                        <br>
+                                                        Built with c# .net. Graphical User Interface constructed with .net MAUI. Authentication with Microsoft Entra ID. 
+                                                        Databasing done with Cosmos DB.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide-content">
+                                    <div class="slide-image">
+                                        <a href="Pages/Programming/programming_catalog.html#uvsim">
+                                            <img src="Pages/Programming/Images/UVSim_IED/uvsim_two.png" alt="UVSim">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text screen">
+                                        <div class="backlight">
+                                            <div class="terminal-wrapper">
+                                                <div class="terminal">
+                                                    <div class="scanline"></div>
+                                                    <h3>UVSim IDE</h3>
+                                                    <p>
+                                                        An Integrated Development Environment for the creation, assembling, and execution of a rudimentary assembly language created for 
+                                                        educational purposes.
+                                                        <br>
+                                                        <br>
+                                                        Build with c# .net, Graphical User Interface constructed with .net MAUI.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="slide-content">
+                                    <div class="slide-image">
+                                        <a href="Pages/Programming/programming_catalog.html#sfml-mem">
+                                            <img src="Pages/Programming/Images/SFML_Mem/threeCards.png" alt="Memory Game">
+                                        </a>
+                                    </div>
+                                    <div class="slide-text screen">
+                                        <div class="backlight">
+                                            <div class="terminal-wrapper">
+                                                <div class="terminal">
+                                                    <div class="scanline"></div>
+                                                    <h3>Card Memory Game</h3>
+                                                    <p>
+                                                        A simple card flipping memory game.
+                                                        <br>
+                                                        <br>
+                                                        Build in c++, Graphical User Interface constructed with the SFML cross platform GUI libraries.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="link-to-catalog flickerText" style="color: var(--green-color);" href="Pages/Programming/programming_catalog.html">View the Programming Catalog</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="exhibit rect_bg" id="3dmodeling" 
+            style="
+                --text-color: #ffffff;
+                --catalog_link-color: #cfcfcf;
+                --catalog_link-hover: #ffffff;
+            
+                --slide_link-color: #cfcfcf;
+                --slide_link-hover: #ffffff;
+                --color: #3333339d;">
+                <div class="video-container">
+                    <img src="Pages/3D Models/Video/smoke.apng" class="video_bg radial_bg" 
+                    style="--center-color: #a697fa;">
+                    <div class="gradient-mask-top" 
+                    style="--gradient-color: #333;"></div>
+                    <div class="gradient-mask-bottom" 
+                    style="--gradient-color: #333;"></div>
+                </div>
+                
+                <div class="flex-item">
+                    <a class="exhibit-title" href="Pages/3D Models/3d_models_catalog.html">
+                        <h1>3D Modeling Exhibit</h1>
+                    </a>
+                </div>
+
+                <div class="flex-item">
+                    <div class="section-description">
+                        <p>
+                        This carousel contains renders of a selection of 3D models I have created. 
+                        Clicking on the image in an item will take you to that item's entry in the 3D Modeling Catalog where more details and renders of that item can be found
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/3D Models/3d_models_catalog.html#sword_apris">
+                                    <img src="Pages/3D Models/Images/SwordOfApris/whole.png" alt="Sword of Apris - Feather Damascus Longsword">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Sword of Apris - Feather Damascus Longsword</h3>
+                                <p style="padding-left: 20px;">
+                                    &nbsp;&nbsp;<i>- "A holy relic imbued with the celestial powers of the divines. Mighty and swift as an angels wings."</i>
+                                </p>
+                                <p style="text-align: right;">
+                                    <i>-- Saga of the Holy City - The Sword of Apris</i>
+                                </p>
+                                <p>
+                                    <br>
+                                    Among my 3D creations definitely one of the most beautiful, and one of my favorites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/3D Models/3d_models_catalog.html#gun_revolving_rifle">
+                                    <img src="Pages/3D Models/Images/RevolvingRifle/Swung.png" alt="Revolving Rifle - action open">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Revolving Rifle</h3>
+                                <p style="padding-left: 20px;">
+                                    &nbsp;&nbsp;<i>- ".45 may'v won your two world wars, but if we was using 45-70 there wouldn't a been two"</i>
+                                </p>
+                                <p style="text-align: right;">
+                                    <i>-- Daryl - Cowboy Boomer</i>
+                                </p>
+                                <p>
+                                    <br>
+                                    Just a crazy idea I whipped up, a 45-70 cylinder rifle with a break action.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <a href="Pages/3D Models/3d_models_catalog.html#gun_bullpup_battle_rifle">
+                                    <img src="Pages/3D Models/Images/BullpupBattleRifle/SideFront.png" alt="Bullpup Battle Riffle - front">
+                                </a>
+                            </div>
+                            <div class="slide-text">
+                                <h3>Bullpup Battle Rifle</h3>
+                                <p style="padding-left: 20px;">
+                                    &nbsp;&nbsp;<i>- "I once knew man who make AK from shovel. He tell me AK best gun, except maybe Puh Puh Shah. Can make both from shovel."</i>
+                                </p>
+                                <p style="text-align: right;">
+                                    <i>-- Ivan Ivanovitch Ivanov
+                                        <br>
+                                        (John Johnson of the Johns)</i>
+                                </p>
+                                <p>
+                                    <br>
+                                    Okay, this one isn't actually done... but I just love it so I'm putting it here anyway.
+                                    <br>
+                                    <br>
+                                    A 7.62x39 bullpup long-stroke gas operated battle rifle. Freaky deaky futuristic Russian space magic at its finest.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="link-to-catalog" href="Pages/3D Models/3d_models_catalog.html">View the 3D Models Catalog</a>
+            </section>
+		</main>
+
+        <footer class="footer" id="contact_me">
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
+
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </footer>
+
+        <!--<div id="phoneModal" class="modal-container">
+            <div class="modal-box">
+                <span id="closeBtn" class="close-btn">Close Me</span>
+                <h2>Andrew's Phone Number</h2>
+                <p>+1 443-450-8469</p>
+            </div>
+        </div>-->
+
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="Scripts/slick_init.js"></script>
+        
+        <script src="Scripts/nav_header_controller.js"></script>
+		<script src="Scripts/business_card_interact.js"></script>
+        <script src="Scripts/business_card_prompt.js"></script>
+
+        <script src="Scripts/footer.js"></script>
+
+        <script src="Scripts/CarouselImageModal.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+        <script src="Scripts/particle_background_init.js"></script>
+    </body>
+</html>

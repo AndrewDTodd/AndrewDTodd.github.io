@@ -1,0 +1,220 @@
+.school-projects-header
+{
+    color: #a4a4a4;
+}
+
+.school-projects-text
+{
+    color: #a4a4a4;
+}
+
+.school-projects-link
+{
+    color: #a4a4a4;
+}
+
+.catalog-item
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #cfcfcf;
+}
+
+.flex-item
+{
+    width: 100%;
+    box-sizing: border-box;
+}
+.flex-item h1
+{
+    padding-left: 20px;
+}
+
+#carousel-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    padding: 15px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, transparent 3%, #555 50%, transparent 97%);
+    border-image-slice: 1;
+}
+
+.slide-content
+{
+    display: flex;
+    height: 100%;
+}
+
+.slide-image
+{
+    width: 100%;
+}
+.slide-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slide-video
+{
+    width: 100%;
+}
+.slide-video video
+{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-description
+{
+    padding: 10px;
+    color: #cfcfcf;
+    overflow-y: auto;
+}
+.item-description p
+{
+    margin: 0px;
+}
+
+.item-technical-details
+{
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.item-technical-details p
+{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.technical-diagram
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.technical-diagram .text
+{
+    height: 15vh;
+    margin: 0 auto;
+}
+.technical-diagram img
+{
+    display: block;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-left: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.technical-diagram p::-webkit-scrollbar
+{
+    width: 5px;
+}
+.technical-diagram p::-webkit-scrollbar-thumb
+{
+    background-color: #696969;
+    border-radius: 2.5px;
+}
+.technical-diagram p::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+.technical-diagram p::-webkit-scrollbar-button
+{
+    display: none;
+}
+
+.link-to-item
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #8d8d8d;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+.link-to-item:hover
+{
+    color: #b0b0b0;
+    text-decoration: underline;
+}
+
+@media(min-width: 1351px)
+{
+    #carousel-container
+    {
+        flex-direction: row;
+    }
+
+    .carousel
+    {
+        height: 90%;
+        width: 60%;
+    }
+
+    .item-description
+    {
+        width: 30%;
+        padding-left: 20px;
+        border-left: 2px solid transparent;
+        border-image: linear-gradient(to bottom, transparent, white, transparent);
+        border-image-slice: 1;
+    }
+
+    .technical-diagram img
+    {
+        max-width: 60%;
+    }
+    .technical-diagram .text
+    {
+        max-width: 60%;
+    }
+}
+
+@media(max-width: 1350px)
+{
+    #carousel-container
+    {
+        flex-direction: column;
+    }
+
+    .carousel
+    {
+        height: 60%;
+        width: 90%;
+    }
+
+    .item-description
+    {
+        height: 30%;
+        width: 90%;
+        text-align: center;
+        padding-top: 20px;
+        border-top: 2px solid transparent;
+        border-image: linear-gradient(to right, transparent 3%, white 50%, transparent 97%);
+        border-image-slice: 1;
+    }
+
+    .technical-diagram img
+    {
+        max-width: 90%;
+    }
+    .technical-diagram .text
+    {
+        max-width: 90%;
+    }
+}

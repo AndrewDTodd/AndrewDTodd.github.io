@@ -1,0 +1,599 @@
+<!--
+Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: Andrew Todd
+Submitted: 03/01/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../Styles/style.css">
+        <link rel="stylesheet" href="../CommonStyles/NavHeader.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogIndex.css">
+        <link rel="stylesheet" href="../../Styles/Carousel.css">
+        <link rel="stylesheet" href="Styles/ProgrammingPageStyles.css">
+        <link rel="stylesheet" href="../../Styles/Footer.css">
+        <link rel="stylesheet" href="../../Styles/CrtTerminal.css">
+        
+		<title>Andrew's Portfolio/Programming Catalog</title>
+	</head>
+	<body class="charcoal-body">
+		<header class="page-header">
+    		<div class="left-container">
+                <div class="back-button item" id="back-button" 
+                style="--icon-color: var(--accent-amber-color); --icon-color-hover: var(--amber-color);">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </div>
+                
+                <div class="menu-icon item" 
+                style="--icon-color: var(--accent-amber-color); --icon-color-hover: var(--amber-color);">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            
+            <div class="website-title" style="--title-color: var(--amber-color);">
+                <p>
+                    Andrew's Portfolio: <span class="wrap">Programming Catalog</span>
+                </p>
+            </div>
+
+            <div class="links-container">
+    			<nav class="header-navigation" 
+                style="--text-color: var(--accent-amber-color); --text-color-hover: var(--amber-color);">
+    				<ul>
+                        <li><h3 style="margin: 0; color: var(--amber-color);">Catalogs:</h3></li>
+                        <li><a href="/Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="/Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+    				</ul>
+    			</nav>
+                
+    			<div class="social-links-nav" 
+                style="--icon-color: var(--accent-amber-color); --icon-color-hover: var(--amber-color);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#" class="back-to-top-button">
+                    <i class="fa-solid fa-arrow-up icon" 
+                    style="--icon-color: var(--accent-amber-color); --icon-color-hover: var(--amber-color);"></i>
+                    <p class="button-text" 
+                    style="--text-color: var(--accent-amber-color); --text-color-hover: var(--amber-color);">Top</p>
+                </a>
+            </div>
+
+            <div class="submenu" id="submenu" 
+            style="
+                    --header-color: var(--accent-amber-color);
+                    --header-color-hover: var(--amber-color);
+
+                    --link-color: var(--accent-amber-color);
+                    --link-color-hover: var(--amber-color);">
+                <div class="category">
+                    <h3 class="category-title">
+                        Commercial Applications
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#autastic_companion">Autastic Companion App</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Applications with GUI
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#uvsim">UVSim IDE</a></li>
+                        <li><a href="#sfml-mem">Card Memory Game</a></li>
+                        <li><a href="#image-rotator">Image Rotator</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-submenu" id="submenu" 
+            style="
+                    --header-color: var(--accent-amber-color);
+                    --header-color-hover: var(--amber-color);
+
+                    --link-color: var(--accent-amber-color);
+                    --link-color-hover: var(--amber-color);">
+                <div class="category expanded">
+                    <h3 class="category-title">
+                        Catalogs
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="/Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="/Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Commercial Applications
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#autastic_companion">Autastic Companion App</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Applications with GUI
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#uvsim">UVSim IDE</a></li>
+                        <li><a href="#sfml-mem">Card Memory Game</a></li>
+                        <li><a href="#image-rotator">Image Rotator</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+
+                <div class="social-links-nav"
+                style="--icon-color: var(--accent-amber-color); --icon-color-hover: var(--amber-color);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+		</header>
+
+		<main>
+            <div class="backlight_bg" style="--light-color: var(--amber-bg);">
+                <div class="crt_bg"></div>
+            </div>
+
+            <section class="catalog-index" style="background-color: transparent;" id="catalog_index">
+                <h1 class="flickerText" style="color: var(--amber-color);">Programming Catalog</h1>
+
+                <p class="flickerText" style="color: var(--amber-color);">
+                    Welcome to my Programming Catalog. Here you can find a collection of applications I have developed or otherwise helped to develop. 
+                    An entry will contain a carousel of screenshots showcasing various aspects of the application. 
+                    Along with images of the application, there will be an information section to provide details about the application.
+                    <br>
+                    <br>
+                    The images in the carousels can be clicked to open a modal view of that image.
+                    <br>
+                    <br>
+                    Thanks for checking it out!
+                </p>
+
+                <h3 class="school-projects-header flickerText" style="color: var(--accent-amber-color);">A Note on School Projects</h3>
+
+                <p class="school-projects-text flickerText" style="color: var(--accent-amber-color);">
+                    Some of the programs I have made over the course of my schooling will be in this catalog, though many will not be featured here. 
+                    If you would like to see a more complete collection of the applications/projects I made for school, you can check out 
+                    <a class="school-projects-link" href="https://github.com/AndrewDTodd-SchoolProjects" target="_blank">this</a> 
+                    Github organization where I have put school projects.
+                </p>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="autastic_companion">
+                <div class="flex-item">
+                    <h1 class="flickerText" style="color: var(--amber-color);">Autastic Education - Companion Application</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/AutasticParentApp/WelcomeHomepage.png" alt="Autastic Parent App Welcome screen">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/AutasticParentApp/PupilsView.png" alt="Autastic Parent App Children and Patients view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/AutasticParentApp/ChildStats.png" alt="Autastic Parent Child's stats screen">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description screen">
+                        <div class="backlight">
+                            <div class="terminal-wrapper">
+                                <div class="terminal">
+                                    <div class="scanline"></div>
+                                    <p>
+                                        The Autastic project consists of two primary applications, the therapy application (found under games) and this application. 
+                                        This is the companion app meant to be used by parents and clinical professionals. 
+                                        For the companion application I have had a primarily managerial role focusing largely on design and architecture. 
+                                        <br>
+                                        <br>
+                                        This application provides a unified location for parents and clinicians to digest and utilize the statistics and progress information generated by the 
+                                        therapy software. It furthermore allows these parents and professionals to configure and interact with the therapy software to maximize the therapy 
+                                        outcomes of their children or patients.
+                                        <br>
+                                        <br>
+                                        The Autastic project is an ongoing project. As such the images here are from a development build and do not necessarily reflect the finished product.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-technical-details flickerText" style="color: var(--amber-color);">
+                    <h3>Technical Details and Notes</h3>
+                    <p>
+                        The Autastic Companion Application is developed in c# .net. 
+                        It utilizes .net MAUI to create a multi platform application user interface. 
+                        Its functionality is made possible by Microsoft Entra ID, Cosmos DB and other cloud services and technologies.
+                    </p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="uvsim">
+                <div class="flex-item">
+                    <h1 class="flickerText" style="color: var(--amber-color);">UVSim IDE - Basic Machine Language Assembler and Interpreter</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/UVSim_IED/uvsim_one.png" alt="UVSim - view one">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/UVSim_IED/uvsim_two.png" alt="UVSim - view two">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/UVSim_IED/uvsim_three.png" alt="UVSim - view three">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description screen">
+                        <div class="backlight">
+                            <div class="terminal-wrapper">
+                                <div class="terminal">
+                                    <div class="scanline"></div>
+                                    <p>
+                                        This application represents the culmination of a project I made for a Software Engineering class. It begins at 
+                                        its core with a very simple assembler that converts a rudimentary assembly language that was designed to demonstrate machine code by the use 
+                                        of instruction codes as assembly mnemonics. The assembler creates a RISK style intermediate byte-code that is then digested by a runtime interpreter.
+                                        <br>
+                                        <br>
+                                        After the fundamental assembler and interpreter were implemented, I decided to create a GUI that would allow for the editing of the 
+                                        "Basic Machine Language" programs. As well as this editor we were tasked to create some kind of GUI that would allow the monitoring of the interpreters 
+                                        resources. In the end what I ended up making was an Integrated Development Environment that allows the creation of "Basic Machine Language" programs, 
+                                        the ability to then assemble those programs into the intermediate binary, and finally execute those programs on the runtime interpreter and view the 
+                                        systems simulated resources in a graphical interface, all from within one integrated environment. Hence the UVSim IDE.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-technical-details flickerText" style="color: var(--amber-color);">
+                    <h3>Technical Details and Notes</h3>
+
+                    <p>
+                        The entire project was built using c# .net. In the end I would probably not build the entire project in c# if I were to do it over again. The decision to 
+                        use c# was made out of a desire to use .net MAUI for the eventual GUI. This initially proved to be a bit headache as MAUI originally did not support 
+                        building directly to a standalone executable on windows. However, this support has since been added and I have been able to go back and rebuild to a 
+                        standalone executable.
+                        <br>
+                        <br>
+                        This project was developed shortly after .net MAUI was officially released, and suffice it to say its support for desktop GUI development seemed to be a 
+                        bit of an afterthought at the time. Not only were the MAUI visual elements more oriented for mobile UIs, at the time that I built this project MAUI could 
+                        not be used to build to an exe. I did not know this when I began, and only became aware at the very end of development.
+                        <br>
+                        <br>
+                        All said and done, UVSim IDE is definitely not perfect, but it was a great learning experience. In particular it was a unique opportunity to get 
+                        a head start on thinking about certain aspects of assembler design and implementation that I would use soon thereafter when beginning the CS capstone. 
+                        These realizations when elaborated on and incorporated into my assembler, virtual machine, and compiler made the development of those pieces of software 
+                        much easier, more rapid, and resulted in a much better final product. Furthermore, it has allowed the code of my capstone items to be much more receptive 
+                        to changes and even major feature additions.
+                    </p>
+
+                    <p>
+                        <br>
+                        For those curious about some of the design elements, here is a class diagram I made for the UVSim model. Sorry, I know the UML formatting on this one is not great.
+                    </p>
+
+                    <div class="technical-diagram">
+                        <img src="Images/UVSim_IED/UVSim2.0_Model.png">
+
+                        <div class="text screen">
+                            <div class="backlight">
+                                <div class="terminal-wrapper">
+                                    <div class="terminal">
+                                        <div class="scanline"></div>
+                                        <p>
+                                            The most important aspect of the UVSim design - the one that was ultimately carried over into and expanded upon in the capstone - is the idea of a hybrid 
+                                            command and visitor pattern in the assembler and virtual machine's instruction handling. The idea is to create independent instruction objects for the 
+                                            respective software that become a piece of a larger machine that digests the input and uses those smaller pieces to get the job done.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd/UVSIM2.0" target="_blank">Github Repo for the UVSim IDE</a>
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd/UVSIM2.0/releases" target="_blank">UVSim IDE Windows Build</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="sfml-mem">
+                <div class="flex-item">
+                    <h1 class="flickerText" style="color: var(--amber-color);">Card Flip Memory Game</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/program_start.png" alt="Card Memory Start">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/threeCards.png" alt="Card Memory three cards matched">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SFML_Mem/matched.png" alt="Card Memory matched cards removed">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description screen">
+                        <div class="backlight">
+                            <div class="terminal-wrapper">
+                                <div class="terminal">
+                                    <div class="scanline"></div>
+                                    <p>
+                                        This application is a relatively simple memory game made in an effort to learn some ways to make GUI by hand in a c++ program. 
+                                        The application creates a grid with a randomly shuffled deck of cards upon startup. The user can then select the face down cards one at a time 
+                                        to flip them face up and reveal the identity of the card. As the user finds and selects matches, those matched cards will remain face up 
+                                        together until either all four of that cards kind are selected in sequence, or the sequence is broken by the selection of a different kind 
+                                        of card, at which time the four of a kind cards will be removed from the field.
+                                        <br>
+                                        <br>
+                                        All in all the project was a good learning opportunity. Not only creating the c++ objects and functions needed to run the game, 
+                                        but also to become a little familiar with the SFML cross platform GUI libraries and development of c++ applications on mac with xcode, which is not my 
+                                        normal development environment or target platform.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-technical-details flickerText" style="color: var(--amber-color);"">
+                    <h3>Technical Details and Notes</h3>
+
+                    <p>
+                        The entire project was built using c++ and the SFML GUI libraries. Given that I now have more experience with at least a few other GUI options, I can say I 
+                        prefer a more modern approach. At least in 2019 when I built this, all the GUI related elements were hard coded compared to how newer frameworks like MAUI or 
+                        WIN UI allow a more visual markup approach. That being said, cross platform is very nice and unlike MAUI, SFML would let me build to an exe.
+                    </p>
+                </div>
+
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd/SFML-Memory-Game" target="_blank">Github Repo for the Memory Game</a>
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd/SFML-Memory-Game/releases" target="_blank">Memory Game Windows Build</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="image-rotator">
+                <div class="flex-item">
+                    <h1 class="flickerText" style="color: var(--amber-color);">Image Rotator</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/ImageRotator/ScreenShot_AppStartup.png" alt="Image Rotator at Launch">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/ImageRotator/ScreenShot_FilePicker_OnLoadImagesButtonClicked.png" alt="Image Rotator load images">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/ImageRotator/ScreenShot_CatsInRotationField_PreSave.png" alt="Image Rotator images rotated">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/ImageRotator/ScreenShot_FilesDestinationPicker_OnSaveEdits.png" alt="Image Rotator save edits">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-description screen">
+                        <div class="backlight">
+                            <div class="terminal-wrapper">
+                                <div class="terminal">
+                                    <div class="scanline"></div>
+                                    <p>
+                                        This application was programmed in c# and the GUI was done with MAUI. The user can load in any number of images, and then selectively rotate the images.
+                                         After rotating images the user can save edits over the original image files, or create new image files.
+                                        <br>
+                                        <br>
+                                        This project was a great opportunity to develope a Graphical User Interface that provides a functional and appealing user experience. I also enjoyed 
+                                        learning how to use some .net graphical libraries to manipulate images and then serialize those changes.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-technical-details flickerText" style="color: var(--amber-color);">
+                    <h3>Technical Details and Notes</h3>
+
+                    <p>
+                        The project was built using c# .net. The logic for the program utilizes some simple modular services and data models to modify the images. The GUI 
+                        utilizes the MVVM design pattern to create the visual elements and interface the visual items with the backend of the program.
+                    </p>
+
+                    <div class="technical-diagram">
+                        <img src="Images/ImageRotator/BackEndUML.png">
+
+                        <div class="text screen">
+                            <div class="backlight">
+                                <div class="terminal-wrapper">
+                                    <div class="terminal">
+                                        <div class="scanline"></div>
+                                        <p>
+                                            The backend (model) is composed of a few small modules that define the structure of the data needed by the program, and the logic used to manipulate that data 
+                                            so that the images can be rotated. It also defines an interface that allows for dependency injection of a file picker on a specific platform as at 
+                                            the time of development .net and MAUI didn't have a unified file picker that was cross platform.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="technical-diagram">
+                        <img src="Images/ImageRotator/FromEnd_MVVM_UML.png">
+
+                        <div class="text screen">
+                            <div class="backlight">
+                                <div class="terminal-wrapper">
+                                    <div class="terminal">
+                                        <div class="scanline"></div>
+                                        <p>
+                                            The frontend (View in the MVVM design pattern) is connected to the logic of the program via the view-models. The view-models contain references to 
+                                            instances of items from the model and knows how and when to call logic from the backend to manipulate the models.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd-SchoolProjects/CS3260-Lab_13" target="_blank">Github Repo for the Image Rotator</a>
+                <a class="link-to-item flickerText" style="color: var(--green-color);" href="https://github.com/AndrewDTodd-SchoolProjects/CS3260-Lab_13/releases" target="_blank">Image Rotator Windows Build</a>
+            </section>
+
+            <hr>
+        </main>
+
+        <footer class="footer" style="background: transparent;" id="contact_me">
+            <div class="backlight_bg" style="--light-color: var(--amber-bg);">
+                <div class="crt_bg"></div>
+            </div>
+
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
+
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </footer>
+
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../../Scripts/slick_init.js"></script>
+
+        <script src="../CommonScripts/nav_header_controller.js"></script>
+
+        <script src="../../Scripts/footer.js"></script>
+
+        <script src="../../Scripts/CarouselImageModal.js"></script>
+    </body>
+</html>

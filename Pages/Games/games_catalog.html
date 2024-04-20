@@ -1,0 +1,472 @@
+<!--
+Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: Andrew Todd
+Submitted: 03/01/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../Styles/style.css">
+        <link rel="stylesheet" href="../CommonStyles/NavHeader.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogIndex.css">
+        <link rel="stylesheet" href="../../Styles/Carousel.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogItem.css">
+        <link rel="stylesheet" href="../../Styles/Footer.css">
+        
+		<title>Andrew's Portfolio/Games Catalog</title>
+	</head>
+	<body class="charcoal-body">
+		<header class="page-header">
+    		<div class="left-container">
+                <div class="back-button item" id="back-button" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </div>
+                
+                <div class="menu-icon item" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            
+            <div class="website-title">
+                <p>
+                    Andrew's Portfolio: <span class="wrap">Games Catalog</span>
+                </p>
+            </div>
+
+            <div class="links-container">
+    			<nav class="header-navigation" 
+                style="--text-color-hover: rgb(150, 204, 255);">
+    				<ul>
+                        <li><h3 style="margin: 0;">Catalogs:</h3></li>
+                        <li><a href="/Pages/Programming/programming_catalog.html">Programming</a></li>
+                        <li><a href="/Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+    				</ul>
+    			</nav>
+                
+    			<div class="social-links-nav" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#" class="back-to-top-button">
+                    <i class="fa-solid fa-arrow-up icon" 
+                    style="--icon-color-hover: rgb(150, 204, 255);"></i>
+                    <p class="button-text" 
+                    style="--text-color-hover: rgb(150, 204, 255);">Top</p>
+                </a>
+            </div>
+
+            <div class="submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category">
+                    <h3 class="category-title">
+                        Commercial Projects
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#autastic_education">Autastic Therapy App</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        2016-2017 FBLA Submissions
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#wilderness_survival">Wilderness Survival</a></li>
+                        <li><a href="#eclipse">Eclipse</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Personal Projects
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#space_invaders">Solar Flare</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category expanded">
+                    <h3 class="category-title">
+                        Catalogs
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="/Pages/Programming/programming_catalog.html">Programming</a></li>
+                        <li><a href="/Pages/3D Models/3d_models_catalog.html">3D Modeling</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Commercial Projects
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#autastic_education">Autastic Therapy App</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        2016-2017 FBLA Submissions
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#wilderness_survival">Wilderness Survival</a></li>
+                        <li><a href="#eclipse">Eclipse</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Personal Projects
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#space_invaders">Solar Flare</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+
+                <div class="social-links-nav"
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+		</header>
+
+		<main class="rect_bg" style="
+            --text-color: #ffffff;
+            --catalog_link-color: #cfcfcf;
+            --catalog_link-hover: #ffffff;
+        
+            --slide_link-color: #cfcfcf;
+            --slide_link-hover: #ffffff;
+
+            --color: #33333381;">
+            <div class="video-container" style="--position: fixed;">
+                <video autoplay loop muted class="video_bg radial_bg" 
+                style="--position: fixed; --center-color: #a12f2f;">
+                    <source src="Video/oceanBGTransparent.webm" type="video/webm">
+                </video>
+                <div class="gradient-mask bottom" 
+                    style="--gradient-color: #333;"></div>
+            </div>
+
+            <section class="catalog-item" id="autastic_education" 
+            style="padding-top: 60px;">
+                <div class="flex-item">
+                    <h1>Autastic Education - ABA Therapy App</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Autastic/MainMenu.png" alt="Main Menu screenshot">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Autastic/LevelSelectionMap.png" alt="Level selection">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Autastic/AutasticLevelExample.png" alt="Level in action">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Autastic/CharacterCreator.png" alt="Character avatar creator">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>
+                            The Autastic project consists of two primary applications, as well as this application there is a companion application (found under programming).
+                            This is the ABA therapy supplement app meant to be used by autistic children. I have been 
+                            the director and technical lead on the project, coordinating efforts across the team. As well as my managerial role in this project, I have worked on 
+                            individual levels and technologies used across the project.
+                            <br>
+                            <br>
+                            This application gamifies and digitizes a selection of ABA therapy activities such that a child and their family can utilize these therapies at home 
+                            each day, and at a dynamic pace appropriate to that child.
+                            <br>
+                            <br>
+                            The Autastic project is an ongoing project. As such the images here are from a development build and do not necessarily reflect the finished product.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="wilderness_survival">
+                <div class="flex-item">
+                    <h1>Wilderness Survival - sandbox survival simulator</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/WildernessSurvival/MainMenu.png" alt="Main Menu screenshot">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/WildernessSurvival/StartCabin.png" alt="Starter Cabin on Level One">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/WildernessSurvival/CraftingUI.png" alt="Crafting UI screenshot">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/WildernessSurvival/Wolf.png" alt="Wolf Attack on Level One">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>Wilderness Survival is an open world survival game that I built for the national FBLA competition my senior year of High School. 
+                            The game features three distinct biomes for the player to explore. The player gathers and extracts resources and uses them to craft progressively
+                            more complicated items and even structures.
+                            <br>
+                            <br>
+                            The game was built using Unity, as such game code was developed in c#. Some of the assets were obtained on the Unity marketplace, those created from 
+                            scratch were modeled and textured in blender.
+                            <br>
+                            <br>
+                            Unfortunately I have lost the source files for this project over the years. I was a lot less careful about backing things up in the past. 
+                            However, I did at least keep a windows build of the game. It can be obtained in the link below if you are interested. 
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://drive.google.com/file/d/0ByKFFfLoyrUVblFyWVB0QlJsazA/view?usp=sharing&resourcekey=0-YldVVkLMe_qb4XCXvNLX_g" target="_blank">Wilderness Survival Windows Build</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="eclipse">
+                <div class="flex-item">
+                    <h1>Eclipse</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Eclipse/preview.jpg" alt="Eclipse box art">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Eclipse/Menu.png" alt="Eclipse menu screenshot">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Eclipse/ship_wireframe.png" alt="Eclipse freight ship level wireframe">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>
+                            This project was something that could be loosely described as a "game", lets just say it was a "good learning opportunity". My partner and I put this 
+                            together as our submission for the 2016 FBLA real-time simulation and game design Maryland state competition. It had a lot of problems, unfortunately  
+                            not among the least of which was the fact that didn't really have much of an objective, the gameplay was terrible, and all in all it was more of a 
+                            technical demo than it was a game. We definitely suffered from a lack of perspective on this project concerning the time we had and what could be 
+                            achieved in that time. Somehow though, by the grace of one judge who played the game and our incredible in-person presentation, we managed to place 
+                            and go to nationals, where we decided to completely scrap this project and created 
+                            <a style="text-decoration: underline; color: #cfcfcf;" href="#wilderness_survival">Wilderness Survival</a> which was an astronomically better game.
+                            <br>
+                            <br>
+                            The "game" was built using Unity, as such game code was developed in c#.
+                            <br>
+                            <br>
+                            I think I was probably so ashamed of this thing after the states competition that I either deleted the project, or "neglected" to back it up. 
+                            It doesn't exist anymore. However, digging through some old things I found a flashdrive that contained files from our in-person presentation we gave 
+                            at the state competition. I've decided to include this item in the catalog as its an important part of my developer story.
+                            <br>
+                            <br> 
+                            You may note the weird looking spaceship image in the carousel. Unfortunately back then I didn't know of a good way to render wireframes of models 
+                            in blender. So what I came up with was... well that.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="space_invaders">
+                <div class="flex-item">
+                    <h1>Solar Flare - space invaders clone</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SpaceInvaders/Menu.png" alt="Main Menu screenshot">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SpaceInvaders/game_start.png" alt="Level launch state">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SpaceInvaders/play.png" alt="Level in action">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SpaceInvaders/highscore.png" alt="Main menu high score table">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>Solar Flare is a space invaders like game I made years ago. It has been periodically updated with new bits and pieces along the way though.
+                            <br>
+                            <br>
+                            The game was built using Unity, as such game code was developed in c#. All of the assets are hand crafted or otherwise built by myself.
+                            <br>
+                            <br>
+                            The Unity project is backed up on Github, as well as a windows build. I have also hosted a WebGL build on Github that is available on desktop. 
+                            Links are just below.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-webgl-game" href="https://andrewdtodd.github.io/Solar-Flare-Game/" target="_blank">Play Solar Flare</a>
+                <a class="link-to-item" href="https://github.com/AndrewDTodd/Solar-Flare" target="_blank">Solar Flare project Github</a>
+                <a class="link-to-item" href="https://github.com/AndrewDTodd/Solar-Flare/releases" target="_blank">Windows Build</a>
+            </section>
+
+            <hr>
+		</main>
+
+        <footer class="footer" id="contact_me">
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
+
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </footer>
+
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../../Scripts/slick_init.js"></script>
+
+        <script src="../CommonScripts/nav_header_controller.js"></script>
+
+        <script src="../../Scripts/footer.js"></script>
+
+        <script src="../../Scripts/CarouselImageModal.js"></script>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+.title-section
+{
+    position: relative;
+    text-align: center;
+	height: 100vh;
+	width: 100%;
+	background-image: url('../Images/title_section_nebula_background.jpg');
+    background-size: cover;
+    background-position: center;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+.title-section::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(150, 150, 150, 0.7) 40%, rgba(10, 10, 10, 0.4) 80%);
+    z-index: 1;
+}
+
+.social-links-title
+{
+    position: absolute;
+    top: 3vh;
+    right: 4vh;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out 3.2s forwards
+}
+.social-links-title a
+{
+    color: #cfcfcf;
+    margin-left: 10px;
+}
+
+.introduction
+{
+    position: absolute;
+    top: calc(50% - 40vh);
+    padding: 1vh;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+.introduction h1
+{
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    color: #eee;
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    filter: brightness(120%);
+}
+
+.business-card-container
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+	padding: 10vw;
+    z-index: 2;
+}
+
+.business-card-image
+{
+	width: 12cm;
+	height: auto;
+	max-width: 100%;
+	min-width: 8cm;
+	box-shadow: rgba(0, 0, 0, 0.5) 0.3px -10px 20px;
+    transform: perspective(900px) rotateX(-6deg);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 1.2s forwards, businessCardApear 2s ease-out 1.2s none;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out
+}
+.business-card-image_attention
+{
+    transform: perspective(900px) rotateX(9deg) rotateY(-9deg) scale(1.1, 1.1);
+    box-shadow: rgba(0, 0, 0, 0.5) 19px 18px 28px;
+}
+
+.click-me-container
+{
+    position: absolute;
+    top: calc(50% + 20vh);
+    padding: 1vh;
+    z-index: 2;
+    color: red;
+    font-family: 'Inconsolata', monospace;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    filter: brightness(120%);
+    animation: pulse 4s infinite;
+}
+.click-me-container h1
+{
+    font-size: 1em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.red-arrow
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid red;
+    margin: 10px auto;
+}
+
+.title-nav-container
+{
+    position: absolute;
+    top: calc(50% + 38vh);
+    z-index: 3;
+    opacity: 0;
+    min-width: 80vw;
+    background: radial-gradient(ellipse at center, rgba(20, 20, 20, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    animation: fadeIn 0.7s ease-out 3.2s forwards;
+}
+.title-nav-container a
+{
+	text-decoration: none;
+    color: #cfcfcf;
+}
+.title-nav-container a h1
+{
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    filter: brightness(120%);
+    font-size: 1.5em;
+    margin: 0px;
+    margin-bottom: 3px;
+}
+    
+.particles-background
+{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.gradient-overlay
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(to bottom, transparent, #333);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (max-width: 750px)
+{
+    .title-navigation
+    {
+        min-width: 100vw;
+    }
+}

@@ -1,0 +1,811 @@
+<!--
+Project:  Project3-Responsive Web Site-Topic of your Choice
+Name: Andrew Todd
+Submitted: 03/01/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="../../Styles/style.css">
+        <link rel="stylesheet" href="../CommonStyles/NavHeader.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogIndex.css">
+        <link rel="stylesheet" href="../../Styles/Carousel.css">
+        <link rel="stylesheet" href="../CommonStyles/CatalogItem.css">
+        <link rel="stylesheet" href="../../Styles/Footer.css">
+        
+		<title>Andrew's Portfolio/3D Models Catalog</title>
+	</head>
+	<body class="charcoal-body">
+		<header class="page-header">
+    		<div class="left-container">
+                <div class="back-button item" id="back-button" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                </div>
+                
+                <div class="menu-icon item" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+            </div>
+            
+            <div class="website-title">
+                <p>
+                    Andrew's Portfolio: <span class="wrap">3D Modeling Catalog</span>
+                </p>
+            </div>
+
+            <div class="links-container">
+    			<nav class="header-navigation" 
+                style="--text-color-hover: rgb(150, 204, 255);">
+    				<ul>
+                        <li><h3 style="margin: 0;">Catalogs:</h3></li>
+                        <li><a href="/Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="/Pages/Programming/programming_catalog.html">Programming</a></li>
+    				</ul>
+    			</nav>
+                
+    			<div class="social-links-nav" 
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#" class="back-to-top-button">
+                    <i class="fa-solid fa-arrow-up icon" 
+                    style="--icon-color-hover: rgb(150, 204, 255);"></i>
+                    <p class="button-text" 
+                    style="--text-color-hover: rgb(150, 204, 255);">Top</p>
+                </a>
+            </div>
+
+            <div class="submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category">
+                    <h3 class="category-title">
+                        Swords
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#sword_apris">Sword of Apris</a></li>
+                        <li><a href="#sword_guilded">Gilded Longsword</a></li>
+                        <li><a href="#sword_claymore">Claymore</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Firearms
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#gun_revolving_rifle">Revolving Rifle</a></li>
+                        <li><a href="#gun_plasma_pistol">Plasma Big Iron</a></li>
+                        <li><a href="#gun_bullpup_battle_rifle">Bullpup Battle Rifle</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Miscellaneous
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#ring_emerald_birthstone">Emerald Birthstone Ring</a></li>
+                        <li><a href="#ring_gemini_one">Gemini Ring</a></li>
+                        <li><a href="#ring_gemini_two">Gemini Ring Alt</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-submenu" id="submenu" 
+            style="
+                    --header-color-hover: rgb(150, 204, 255);
+                    --link-color-hover: rgb(150, 204, 255);">
+                <div class="category expanded">
+                    <h3 class="category-title">
+                        Catalogs
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="/Pages/Games/games_catalog.html">Games</a></li>
+                        <li><a href="/Pages/Programming/programming_catalog.html">Programming</a></li>
+                    </ul>
+                </div>
+                
+                <div class="category">
+                    <h3 class="category-title">
+                        Swords
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#sword_apris">Sword of Apris</a></li>
+                        <li><a href="#sword_guilded">Gilded Longsword</a></li>
+                        <li><a href="#sword_claymore">Claymore</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Firearms
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#gun_revolving_rifle">Revolving Rifle</a></li>
+                        <li><a href="#gun_plasma_pistol">Plasma Big Iron</a></li>
+                        <li><a href="#gun_bullpup_battle_rifle">Bullpup Battle Rifle</a></li>
+                    </ul>
+                </div>
+
+                <div class="category">
+                    <h3 class="category-title">
+                        Miscellaneous
+                        <i class="fas fa-chevron-down"></i>
+                    </h3>
+                    <ul class="category-links">
+                        <li><a href="#ring_emerald_birthstone">Emerald Birthstone Ring</a></li>
+                        <li><a href="#ring_gemini_one">Gemini Ring</a></li>
+                        <li><a href="#ring_gemini_two">Gemini Ring Alt</a></li>
+                    </ul>
+                </div>
+
+                <ul class="loose-links">
+                    <li><a href="/index.html">Home Page</a></li>
+                    <li><a href="#">Page Top</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+
+                <div class="social-links-nav"
+                style="--icon-color-hover: rgb(150, 204, 255);">
+    				<a href="https://www.linkedin.com/in/andrew-todd-687962161/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x social-icon"></i>
+                    </a>
+
+                    <a href="https://github.com/AndrewDTodd" target="_blank">
+                        <i class="fa-brands fa-github fa-2x social-icon"></i>
+                    </a>
+    			</div>
+            </div>
+		</header>
+
+		<main class="rect_bg" style="
+            --text-color: #ffffff;
+            --catalog_link-color: #cfcfcf;
+            --catalog_link-hover: #ffffff;
+        
+            --slide_link-color: #cfcfcf;
+            --slide_link-hover: #ffffff;
+
+            --color: #33333381;">
+            <div class="video-container" style="--position: fixed;">
+                <img src="Video/smoke.apng" class="video_bg radial_bg" 
+                style="--position: fixed; --center-color: #a697fa;">
+                <div class="gradient-mask-top" 
+                style="--gradient-color: #333;"></div>
+                <div class="gradient-mask-bottom" 
+                style="--gradient-color: #333;"></div>
+            </div>
+
+            <section class="catalog-index" id="catalog_index">
+                <h1>3D Modeling Catalog</h1>
+
+                <p>
+                    Welcome to my 3D Modeling Catalog
+                    <br>
+                    <br>
+                    The entries with a single image have a 3D viewport that will load if the image is clicked. The images in the carousels can be clicked to open a modal view of 
+                    that image.
+                    <br>
+                    <br>
+                    Thanks for checking it out!
+                </p>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="sword_apris">
+                <div class="flex-item">
+                    <h1>Sword of Apris - Feather Damascus Longsword</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <!--<div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/whole.png" alt="Sword of Apris - complete view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/side.png" alt="Sword of Apris - top down side view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/bottom.png" alt="Sword of Apris - bottom up view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/SwordOfApris/top.png" alt="Sword of Apris - top view">
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                    <model-viewer class="model" 
+                    src="Models/SwordOfApris_compLowRes.glb" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    poster="Images/SwordOfApris/whole.png" 
+                    reveal="manual" 
+                    shadow-intensity="0.6" exposure="1.4" 
+                    tone-mapping="commerce" 
+                    auto-rotate>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                    </model-viewer>
+
+                    <div class="item-description">
+                        <p>This is a model of a longsword I made for a D&D campaign. I have dubbed it the Sword of Apris. 
+                            It features feather damascus and a three-metal wire wrap on the hilt.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Eevee rendering engine.
+                            <br>
+                            <br>
+                            Texturing was done in Substance Painter.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/SwordOfApris" target="_blank">Github Repo for the Sword of Apris</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="sword_guilded">
+                <div class="flex-item">
+                    <h1>Gilded Longsword</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <!--<div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GuildedSword/full.png" alt="Gilded Sword - full view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GuildedSword/BladeRunes.png" alt="Gilded Sword - blade runes view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GuildedSword/hilt.png" alt="Gilded Sword - hilt and guard view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GuildedSword/RenderOne.png" alt="Gilded Sword - sword in stone">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <model-viewer class="model" 
+                        src="Models/GildedLongSword_LowRes.glb" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    poster="Images/GuildedSword/BladeRunes.png" 
+                    reveal="manual" 
+                    shadow-intensity="0.6" exposure="1.4" 
+                    tone-mapping="commerce" 
+                    auto-rotate>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                    </model-viewer>
+    
+                    <div class="item-description">
+                        <p>
+                            This longsword is designed in the fashion of a ceremonial sword from the high medieval ages. 
+                            Gilded with gold throughout and engraved with runes on the blade declaring the nobility of the wielder.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Eevee and Cycles rendering engines.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/GildedSword" target="_blank">Github Repo for the Gilded Sword model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="sword_claymore">
+                <div class="flex-item">
+                    <h1>Claymore - Steel and Copper</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Claymore/six.png" alt="Claymore Sword - full view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Claymore/four.png" alt="Claymore - pommel">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Claymore/two.png" alt="Claymore - blade grind and guard view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/Claymore/three.png" alt="Claymore - hilt and guard view">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<model-viewer class="model" 
+                        src="https://media.githubusercontent.com/media/AndrewDTodd/AndrewDTodd.github.io/main/Pages/3D Models/Models/LongSword.glb" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    poster="Images/Claymore/six.png" 
+                    reveal="manual" 
+                    shadow-intensity="0.6" exposure="1.4" 
+                    tone-mapping="commerce" 
+                    auto-rotate>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                    </model-viewer>-->
+    
+                    <div class="item-description">
+                        <p>A model of a Claymore with a double fuller. A more rugged set of materials than the previous sword models, 
+                            this one is made of a high carbon steel and features copper and iron fittings.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Cycles rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/Claymore/tree/main" target="_blank">Github Repo for the Claymore model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="gun_revolving_rifle">
+                <div class="flex-item">
+                    <h1>Revolving Rifle</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <!--<div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/RevolvingRifle/Swung.png" alt="Revolving rifle - break action open textured">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/RevolvingRifle/SwungStudio.png" alt="Revolving rifle - break action open matte">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/RevolvingRifle/SwungWire.png" alt="Revolving rifle - break action open wireframe">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/RevolvingRifle/Side.png" alt="Revolving Rifle - side view action closed matte">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/RevolvingRifle/SideWire.png" alt="Revolving Rifle - side view action closed wireframe">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-video">
+                                <video controls>
+                                    <source src="Images/RevolvingRifle/anim.mp4" type="video/mp4">
+                                    Your browser does not support the video tag, or possibly the use of mp4 videos
+                                </video>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <model-viewer class="model" 
+                        src="Models/RevolvingRifle.glb" 
+                    ar ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    poster="Images/RevolvingRifle/Swung.png" 
+                    reveal="manual" 
+                    shadow-intensity="0.6" exposure="1.4" 
+                    tone-mapping="commerce" 
+                    auto-rotate>
+                        <button slot="ar-button" id="ar-button">
+                            View in your space
+                        </button>
+                    </model-viewer>
+    
+                    <div class="item-description">
+                        <p>A firearm concept of my own creation. A break action revolving rifle chambered in 45-70 gov. 
+                            Not sure that a break action system like this would actually work in real life with a round like 45-70, but in the world of 3D the sky is the limit.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Eevee rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/RevolvingRifle/tree/main" target="_blank">Github Repo for the Revolving Rifle model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="gun_plasma_pistol">
+                <div class="flex-item">
+                    <h1>Plasma Big Iron</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/PlasmaRevolver/SideTex.png" alt="Plasma Revolver - textured side view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/PlasmaRevolver/opening.png" alt="Plasma Revolver - textured side view opening">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/PlasmaRevolver/closing.png" alt="Plasma Revolver - textured side view closing">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/PlasmaRevolver/Side.png" alt="Plasma Revolver - matte side view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/PlasmaRevolver/SideWire.png" alt="Plasma Revolver - wireframe side view">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-video">
+                                <video controls>
+                                    <source src="Images/PlasmaRevolver/anim.mp4" type="video/mp4">
+                                    Your browser does not support the video tag, or possibly the use of mp4 videos
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>Another concept of my own creation, a .44 magnum Big Iron.
+                            <br>
+                            <br>
+                            "Made complete by a 23rd century conversion from conventional .44 mag shells to 
+                            nuclear powered hypersonic plasma rounds. Conveniently facilitated by a simple conversion from the stock cylinder
+                            to the two part plasma cartridge cylinder and electronic firing pin manifold. The electronic firing pins allow for circuit completion within
+                            the plasma cartridges nuclear fuel cell upon hammer strike. The cell's thermal overload causes a slug of reactive material to begin melting as
+                            it is propelled down the barrel to over 1830 m/s and a maximum temperature of 10000&#8451;.""
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Eevee rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/PlasmaRevolver/tree/main" target="_blank">Github Repo for the Plasma Revolver model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="gun_bullpup_battle_rifle">
+                <div class="flex-item">
+                    <h1>Bullpup Battle Rifle</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/BullpupBattleRifle/SideBack.png" alt="Bullpup Battle Rifle - side view back matte">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/BullpupBattleRifle/SideBackWire.png" alt="Bullpup Battle Rifle - side view back wireframe">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/BullpupBattleRifle/SideFront.png" alt="Bullpup Battle Rifle - side view front matte">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/BullpupBattleRifle/SideFrontWire.png" alt="Bullpup Battle Rifle - side view front wireframe">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>This is one of my favorite firearm models I have created. Unfortunately I haven't been able to really finish it yet, so what you are seeing is a work in progress,
+                            but I think its far enough along to appreciate.
+                            <br>
+                            <br>
+                            Chambered in 7.62x39 this bullpup rifle is the mechanical and stylistic mashup of something between an AK-47 and an IWI Tavor.
+                            The operating system is long-stroke gas piston, heavily inspired by the AK-47 and RPK platforms. The body of the firearm however takes its inspiration from
+                            the ergonomics and layout of the Tavor with a bit of AR-15 inspired M-LOK modular rail for good measure.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Eevee rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/BullpupBattleRifle" target="_blank">Github Repo for the Bullpup Battle Rifle project
+                    <br>
+                    (model state as shown, no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="ring_emerald_birthstone">
+                <div class="flex-item">
+                    <h1>Emerald Birthstone Ring - Platinum Shank</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/EmeraldBirthstoneRing/Two.png" alt="Emerald Birthstone Ring - alt version">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/EmeraldBirthstoneRing/One.png" alt="Emerald Birthstone Ring - version one">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>One of the many designs I made while I was experimenting with casting rings.
+                            <br>
+                            <br>
+                            A platinum band with an emerald set in one of two optional setting designs. I personally prefer the first one.
+                            The material for the Emerald was achieved by the use of a node set-up that allows for the photorealistic rendering of pretty much any gemstone imaginable.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Cycles rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/EmeraldBirthstoneRing" target="_blank">Github Repo for the Emerald Birthstone Ring Model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="ring_gemini_one">
+                <div class="flex-item">
+                    <h1>Gemini Ring</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/RenderOne.png" alt="Gemini Ring V One - left">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/RenderTwo.png" alt="Gemini Ring V One - front">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/RenderThree.png" alt="Gemini Ring V One - right">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>One of the many designs I made while I was experimenting with casting rings.
+                            <br>
+                            <br>
+                            Lets just say if I ever though this one was a good idea... my tastes have changed.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Cycles rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/GeminiRingOne" target="_blank">Github Repo for the Gemini Ring Model
+                    <br>
+                    (no textures included)</a>
+            </section>
+
+            <hr>
+
+            <section class="catalog-item" id="ring_gemini_two">
+                <div class="flex-item">
+                    <h1>Gemini Ring Alt</h1>
+                </div>
+
+                <div class="flex-item" id="carousel-container">
+                    <div class="carousel">
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/One.png" alt="Gemini Ring V Two - front">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/Two.png" alt="Gemini Ring V One - right">
+                            </div>
+                        </div>
+
+                        <div class="slide-content">
+                            <div class="slide-image">
+                                <img src="Images/GeminiRing/Three.png" alt="Gemini Ring V One - back">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="item-description">
+                        <p>One of the many designs I made while I was experimenting with casting rings.
+                            <br>
+                            <br>
+                            Better than version 1.0... but still pretty funky.
+                            <br>
+                            <br>
+                            Modeled and rendered in blender using the Cycles rendering engine.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="link-to-item" href="https://github.com/AndrewDTodd-3DModels/GeminiRingTwo" target="_blank">Github Repo for the Gemini Ring Alt Model
+                    <br>
+                    (no textures included)</a>
+            </section>
+		</main>
+
+        <footer class="footer" id="contact_me">
+            <div class="contact-info">
+                <p><a href="mailto:andrewdanieltodd@gmail.com">Email me</a></p>
+                <p><span id="phoneLink" class="phone-link" onclick="handlePhoneClick()">Call or Text me</span></p>
+            </div>
+
+            <div class="footer-contact-form">
+                <p>Or send me a message with this Form</p>
+                
+                <form action="https://formspree.io/f/xyyrzpnq" method="POST">
+                    <div class="contact-form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="contact">Contact method:</label>
+                        <input type="text" id="contact" name="contact" placeholder="Enter your email or phone number" required>
+                    </div>
+    
+                    <div class="contact-form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+    
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </footer>
+
+        <div class="image-modal" id="carousel-image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-image">
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        <script src="../../Scripts/slick_init.js"></script>
+
+        <script src="../CommonScripts/nav_header_controller.js"></script>
+
+        <script src="../../Scripts/footer.js"></script>
+
+        <script src="../../Scripts/CarouselImageModal.js"></script>
+        
+        <script src="Scripts/model_view_config.js"></script>
+    </body>
+</html>

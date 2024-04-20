@@ -1,0 +1,33 @@
+:root
+{
+    --header-color: white;
+    --text-color: #cfcfcf;
+    --catalog_link-color: #8d8d8d;
+    --catalog_link-hover: #b0b0b0;
+}
+
+.catalog-index
+{
+    padding: 20px;
+    padding-top: 65px;
+    color: var(--text-color);
+}
+
+.catalog-index-list
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+.catalog-index-list a
+{
+    display: block;
+    padding: 10px;
+    /*border: 1px solid #8d8d8d;*/
+    text-decoration: none;
+    color: var(--catalog_link-color);
+}
+.catalog-index-list a:hover
+{
+    color: var(--catalog_link-hover);
+}
